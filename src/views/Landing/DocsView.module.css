@@ -1,0 +1,832 @@
+.docsWrapper {
+  background-color: #ffffff;
+  color: #000000;
+  min-height: 100vh;
+  padding-top: 80px; /* Adjusted for docs layout */
+  display: flex;
+}
+
+.sidebar {
+  width: 320px;
+  height: calc(100vh - 80px);
+  position: sticky;
+  top: 80px;
+  padding: 2rem 1.5rem;
+  border-right: 1px solid #f3f4f6;
+  overflow-y: auto;
+  background: #fff;
+  flex-shrink: 0;
+}
+
+.mainContent {
+  flex: 1;
+  padding: 4rem 3rem;
+  max-width: 1200px;
+}
+
+.container {
+  max-width: 800px;
+}
+
+/* Sidebar Styling */
+.sidebarSection {
+  margin-bottom: 2rem;
+}
+
+.sidebarHeader {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #000;
+  margin-bottom: 0.75rem;
+  padding: 0 0.75rem;
+}
+
+.sidebarHeader svg {
+  width: 18px;
+  height: 18px;
+  color: #000;
+}
+
+.sidebarList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebarItem {
+  display: block;
+  width: 100%;
+  text-align: left;
+  padding: 0.5rem 0.75rem;
+  font-size: 0.9375rem;
+  color: #6b7280;
+  text-decoration: none;
+  background: transparent;
+  border: none;
+  transition: all 0.2s;
+  cursor: pointer;
+  font-family: inherit;
+  border-radius: 6px;
+}
+
+.sidebarItem:hover {
+  background-color: #f3f4f6;
+  color: #000;
+}
+
+.sidebarItemActive {
+  background-color: #f3f4f6 !important;
+  color: #000 !important;
+  font-weight: 600;
+}
+
+.subLabel {
+  display: block;
+  padding: 0.5rem 0.75rem;
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: #6b7280;
+  margin-top: 0.5rem;
+}
+
+.indentedItem {
+  padding-left: 2rem !important;
+}
+
+/* Content Styling */
+.badge {
+  display: inline-block;
+  padding: 0.4rem 1rem;
+  background: #f3f4f6;
+  color: #4b5563;
+  border-radius: 2rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+
+.title {
+  font-size: 3rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  margin-bottom: 1.5rem;
+  line-height: 1.1;
+}
+
+.lead {
+  font-size: 1.25rem;
+  color: #4b5563;
+  line-height: 1.6;
+  margin-bottom: 3rem;
+}
+
+.section {
+  margin-bottom: 4rem;
+}
+
+.section h2 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: #000;
+}
+
+.section h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #111827;
+}
+
+.text {
+  font-size: 1.125rem;
+  line-height: 1.8;
+  color: #374151;
+  margin-bottom: 1.5rem;
+}
+
+.codeBlock {
+  background: #f9fafb;
+  border: 1px solid #e5e7eb;
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+  font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin: 1.5rem 0;
+  overflow-x: auto;
+  color: #111827;
+}
+
+.callout {
+  background: #f0f9ff;
+  border-left: 4px solid #0ea5e9;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  margin: 2rem 0;
+}
+
+.calloutTitle {
+  font-weight: 700;
+  color: #0369a1;
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.calloutText {
+  color: #0c4a6e;
+  font-size: 1rem;
+  margin: 0;
+}
+
+.orderedList {
+  counter-reset: item;
+  list-style: none;
+  padding: 0;
+  margin: 2rem 0;
+}
+
+.orderedList li {
+  counter-increment: item;
+  margin-bottom: 2rem;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.orderedList li::before {
+  content: counter(item);
+  background: #000;
+  color: #fff;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.875rem;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.stepContent h4 {
+  margin-bottom: 0.5rem;
+  font-size: 1.125rem;
+  color: #000;
+}
+
+.pillarGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin: 2.5rem 0;
+}
+
+.pillarCard {
+  padding: 1.5rem;
+  background: #f9fafb;
+  border: 1px solid #e5e7eb;
+  border-radius: 1rem;
+}
+
+.pillarCard h4 {
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: #000;
+}
+
+.impactBanner {
+  background: #000;
+  color: #fff;
+  padding: 2.5rem;
+  border-radius: 1.5rem;
+  margin: 3rem 0;
+}
+
+.impactBanner h3 {
+  color: #fff;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.cardGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.stepCard {
+  padding: 1.5rem;
+  border: 1px solid #e5e7eb;
+  border-radius: 1rem;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+
+.stepCard:hover {
+  border-color: #000;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+.stepCard h4 {
+  margin-bottom: 0.5rem;
+  color: #000;
+}
+
+@media (max-width: 1024px) {
+  .docsWrapper {
+    flex-direction: column;
+    padding-top: 0;
+  }
+
+  .sidebar {
+    display: none;
+  }
+
+  .mainContent {
+    margin-left: 0;
+    padding: 1.5rem 1rem;
+    padding-top: 80px; /* Space for fixed mobile header */
+  }
+
+  .mobileHeader {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 64px;
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid #f3f4f6;
+    z-index: 1000;
+    padding: 0 1rem;
+  }
+
+  .mobileHeaderContent {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .menuToggle {
+    background: transparent;
+    border: none;
+    color: #000;
+    cursor: pointer;
+    padding: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    transition: background 0.2s;
+  }
+
+  .menuToggle:hover {
+    background: #f3f4f6;
+  }
+
+  .mobileTitle {
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: #000;
+  }
+
+  /* Sidebar Drawer */
+  .sidebarOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(4px);
+    z-index: 2000;
+    animation: fadeIn 0.3s ease;
+  }
+
+  .mobileSidebar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 85%;
+    max-width: 320px;
+    background: #fff;
+    box-shadow: 20px 0 50px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    animation: slideIn 0.3s ease;
+  }
+
+  .sidebarMobileHeader {
+    padding: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #f3f4f6;
+  }
+
+  .sidebarTitle {
+    font-weight: 800;
+    font-size: 1.25rem;
+  }
+
+  .closeButton {
+    background: transparent;
+    border: none;
+    color: #6b7280;
+    cursor: pointer;
+    padding: 0.5rem;
+    border-radius: 50%;
+    transition: all 0.2s;
+  }
+
+  .closeButton:hover {
+    background: #f3f4f6;
+    color: #000;
+  }
+
+  .mobileSidebarScroll {
+    flex: 1;
+    overflow-y: auto;
+    padding: 1.5rem;
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+
+  .lead {
+    font-size: 1.1rem;
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideIn {
+  from { transform: translateX(-100%); }
+  to { transform: translateX(0); }
+}
+
+.mobileHeader {
+  display: none;
+}
+
+/* Blog & Resources Styling */
+.blogGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.articleCard {
+  background: #fff;
+  border: 1px solid #f3f4f6;
+  border-radius: 1.5rem;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+}
+
+.articleCard:hover {
+  border-color: #000;
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+}
+
+.articleCardImage {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+}
+
+.articleCardImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.articleCard:hover .articleCardImage img {
+  transform: scale(1.05);
+}
+
+.articleCardContent {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.articleDate {
+  font-size: 0.8rem;
+  color: #9ca3af;
+  margin-bottom: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.articleTitle {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #000;
+  margin-bottom: 1rem;
+  line-height: 1.3;
+}
+
+.articleExcerpt {
+  font-size: 0.95rem;
+  color: #6b7280;
+  line-height: 1.5;
+  margin-bottom: 1.5rem;
+}
+
+.articleFooter {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #000;
+}
+
+/* Success Stories */
+.successHero {
+  background: linear-gradient(135deg, #000 0%, #1a1a1a 100%);
+  color: #fff;
+  padding: 3rem;
+  border-radius: 1.5rem;
+  margin-bottom: 3rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.successHero::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.successStat {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 0.5rem;
+}
+
+.successLabel {
+  font-size: 1rem;
+  opacity: 0.8;
+}
+
+.caseStudyCard {
+  border: 1px solid #e5e7eb;
+  border-radius: 1.5rem;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  transition: border-color 0.2s;
+}
+
+.caseStudyCard:hover {
+  border-color: #000;
+}
+
+.caseHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1.5rem;
+}
+
+.companyLogo {
+  height: 32px;
+  background: #f3f4f6;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+}
+
+.caseQuote {
+  font-size: 1.25rem;
+  font-style: italic;
+  color: #374151;
+  border-left: 4px solid #000;
+  padding-left: 1.5rem;
+  margin: 2rem 0;
+}
+
+.ctaBannerBlack {
+  background: #000;
+  color: #fff;
+  padding: 4rem 3rem;
+  border-radius: 1.5rem;
+  margin-top: 4rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.ctaBannerBlack h2 {
+  color: #fff;
+  font-size: 2.5rem;
+  margin: 0;
+}
+
+.ctaBannerBlack p {
+  font-size: 1.25rem;
+  opacity: 0.8;
+  max-width: 600px;
+  margin: 0;
+}
+
+.ctaButton {
+  background: #fff;
+  color: #000;
+  padding: 1rem 2.5rem;
+  border-radius: 3rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: transform 0.2s;
+  margin-top: 1rem;
+}
+
+.ctaButton:hover {
+  transform: scale(1.05);
+}
+
+.industryHeader {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.industryIcon {
+  width: 64px;
+  height: 64px;
+  background: #f3f4f6;
+  border-radius: 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #000;
+}
+
+.backLink {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #6b7280;
+  cursor: pointer;
+  margin-bottom: 2rem;
+  font-weight: 600;
+  transition: color 0.2s;
+}
+
+.backLink:hover {
+  color: #000;
+}
+
+.articleContent {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.articleHero {
+  margin-bottom: 3rem;
+}
+
+.authorInfo {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin: 2rem 0;
+  padding: 1.5rem;
+  background: #f9fafb;
+  border-radius: 1rem;
+}
+
+.authorAvatar {
+  width: 48px;
+  height: 48px;
+  background: #000;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-weight: 700;
+}
+
+.authorDetails h5 {
+  margin: 0;
+  font-size: 1rem;
+  color: #000;
+}
+
+.authorDetails p {
+  margin: 0;
+  font-size: 0.875rem;
+  color: #6b7280;
+}
+
+.solutionGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  margin: 3rem 0;
+}
+
+.markdownBody {
+  font-size: 1.125rem;
+  line-height: 1.8;
+  color: #374151;
+}
+
+.markdownBody h2 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin: 2.5rem 0 1.25rem;
+  color: #000;
+  line-height: 1.3;
+}
+
+.markdownBody h3 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin: 2rem 0 1rem;
+  color: #111827;
+}
+
+.markdownBody p {
+  margin-bottom: 1.5rem;
+}
+
+.markdownBody ul, .markdownBody ol {
+  margin-bottom: 1.5rem;
+  padding-left: 1.5rem;
+}
+
+.markdownBody li {
+  margin-bottom: 0.5rem;
+}
+
+.markdownBody strong {
+  color: #000;
+  font-weight: 700;
+}
+
+.markdownBody blockquote {
+  border-left: 4px solid #e5e7eb;
+  padding-left: 1.5rem;
+  margin: 2rem 0;
+  font-style: italic;
+  color: #4b5563;
+}
+
+@media (max-width: 768px) {
+  .solutionGrid {
+    grid-template-columns: 1fr;
+  }
+  .ctaBannerBlack h2 {
+    font-size: 1.75rem;
+  }
+}
+
+.articleCoverImage {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 1.5rem;
+  margin-bottom: 2.5rem;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+}
+
+.articleMeta {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-bottom: 3rem;
+  padding: 2rem;
+  background: #f9fafb;
+  border-radius: 1.5rem;
+  border: 1px solid #f3f4f6;
+}
+
+.articleSummary {
+  font-size: 1.25rem;
+  line-height: 1.6;
+  color: #111827;
+  font-weight: 500;
+  border-left: 4px solid #000;
+  padding-left: 1.5rem;
+}
+
+.readingTime {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  color: #6b7280;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.tocContainer {
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  border: 1px solid #e5e7eb;
+}
+
+.tocContainer h4 {
+  margin: 0 0 1rem 0;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #9ca3af;
+}
+
+.tocList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.tocItem {
+  color: #4b5563;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: color 0.2s;
+  cursor: pointer;
+}
+
+.tocItem:hover {
+  color: #000;
+}

@@ -1,0 +1,164 @@
+.privacyWrapper {
+  background-color: #ffffff;
+  color: #000000;
+  min-height: 100vh;
+  padding-top: 120px; /* Navbar height */
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 6rem;
+}
+
+.badge {
+  display: inline-block;
+  padding: 0.5rem 1.25rem;
+  background: #000;
+  color: #fff;
+  border-radius: 2rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  margin-bottom: 2rem;
+}
+
+.title {
+  font-size: 3.5rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  margin-bottom: 1.5rem;
+  line-height: 1.1;
+}
+
+.lastUpdated {
+  color: #666;
+  font-size: 0.9375rem;
+}
+
+.content {
+  line-height: 1.8;
+  font-size: 1.125rem;
+  color: #333;
+}
+
+.section {
+  margin-bottom: 4rem;
+}
+
+.section h2 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #000;
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.section h2 span {
+  color: #ccc;
+  font-family: monospace;
+}
+
+.section h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #000;
+  margin: 2rem 0 1rem 0;
+}
+
+.list {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 1.5rem;
+}
+
+.list li {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.list li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #000;
+  font-weight: bold;
+}
+
+.legalNotice {
+  background: #f9fafb;
+  border: 1px solid #e5e7eb;
+  padding: 2.5rem;
+  border-radius: 1.5rem;
+  margin: 4rem 0;
+}
+
+.jurisdictionGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.jurisdictionCard {
+  background: #fff;
+  border: 1px solid #eee;
+  padding: 1.5rem;
+  border-radius: 1rem;
+}
+
+.jurisdictionCard h4 {
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.jurisdictionCard p {
+  font-size: 0.9375rem;
+  color: #666;
+  margin: 0;
+}
+
+.contactBox {
+  background: #000;
+  color: #fff;
+  padding: 3rem;
+  border-radius: 2rem;
+  margin-top: 4rem;
+  text-align: center;
+}
+
+.contactBox h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.emailLink {
+  color: #fff;
+  text-decoration: underline;
+  font-weight: 600;
+  font-size: 1.25rem;
+}
+
+.footer {
+  margin-top: 8rem;
+  padding-top: 4rem;
+  border-top: 1px solid #eee;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 2.5rem;
+  }
+  .jurisdictionGrid {
+    grid-template-columns: 1fr;
+  }
+}
