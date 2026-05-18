@@ -325,9 +325,17 @@ const Landing = ({ onLoginClick }) => {
 
   return (
     <div className={styles.landingContainer}>
+      {/* Background Animated Blobs */}
+      <div className={styles.backgroundBlobs}>
+        <div className={`${styles.blob} ${styles.blob1}`}></div>
+        <div className={`${styles.blob} ${styles.blob2}`}></div>
+        <div className={`${styles.blob} ${styles.blob3}`}></div>
+        <div className={`${styles.blob} ${styles.blob4}`}></div>
+        <div className={`${styles.blob} ${styles.blob5}`}></div>
+      </div>
       {/* Navigation */}
       <nav className={styles.navbar}>
-        <div className={styles.logoContainer} onClick={() => { setCurrentView('home'); setIsMobileMenuOpen(false); }} style={{ cursor: 'pointer' }}>
+        <div className={styles.logoContainer} onClick={() => { setCurrentView('home'); setIsMobileMenuOpen(false); }}>
           <img src={krakenLogo} alt="Kraken AI" className={styles.logo} />
         </div>
 
@@ -368,7 +376,7 @@ const Landing = ({ onLoginClick }) => {
           ))}
         </div>
 
-        <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', zIndex: 9999 }}>
+        <div className={styles.navActionsWrapper}>
           <div 
             className={styles.langToggle} 
             onClick={toggleLanguage}
@@ -382,7 +390,7 @@ const Landing = ({ onLoginClick }) => {
             </div>
           </div>
           <div className={styles.authButtons}>
-            <button className={styles.btnOutline} style={{ marginRight: '1rem', border: '1px solid #e5e7eb', color: '#000' }} onClick={() => onLoginClick('login')}>{t('nav.login')}</button>
+            <button className={`${styles.btnOutline} ${styles.btnNavbar}`} onClick={() => onLoginClick('login')}>{t('nav.login')}</button>
             <button className={styles.btnPrimary} onClick={() => onLoginClick('register')}>{t('nav.getStarted')}</button>
           </div>
         </div>
@@ -447,8 +455,8 @@ const Landing = ({ onLoginClick }) => {
         
         <div className={styles.footerGrid}>
           <div className={styles.footerCol}>
-            <img src={krakenLogo} alt="Kraken AI" style={{ height: '30px', marginBottom: '0.5rem', cursor: 'pointer' }} onClick={() => setCurrentView('home')} />
-            <p style={{ color: '#6b7280', lineHeight: '1.6', maxWidth: '280px', fontSize: '0.9rem' }}>
+            <img src={krakenLogo} alt="Kraken AI" className={styles.footerLogo} onClick={() => setCurrentView('home')} />
+            <p className={styles.footerDesc}>
               {t('footer.description')}
             </p>
           </div>
@@ -501,6 +509,7 @@ const Landing = ({ onLoginClick }) => {
 const HomeView = ({ onLoginClick, setCurrentView, billingCycle, setBillingCycle, gearPlanPrice }) => {
   const { t, getTranslationObject } = useLanguage();
   const [activeStep, setActiveStep] = useState(0);
+  const [activeFaq, setActiveFaq] = useState(null);
 
   const steps = [
     { image: inboxMockup },
@@ -546,10 +555,10 @@ const HomeView = ({ onLoginClick, setCurrentView, billingCycle, setBillingCycle,
             {t('hero.description')}
           </p>
           <div className={styles.heroActions}>
-            <button className={styles.btnPrimary} style={{ padding: '1.25rem 3rem', fontSize: '1.125rem' }} onClick={() => onLoginClick('register')}>
+            <button className={`${styles.btnPrimary} ${styles.btnLarge}`} onClick={() => onLoginClick('register')}>
               {t('hero.ctaPrimary')}
             </button>
-            <button className={styles.btnOutline} style={{ padding: '1.25rem 3rem', fontSize: '1.125rem' }} onClick={() => window.location.href = 'https://wa.me/your_number_here'}>
+            <button className={`${styles.btnOutline} ${styles.btnLarge}`} onClick={() => window.location.href = 'https://wa.me/your_number_here'}>
               {t('hero.ctaSecondary')}
             </button>
           </div>
@@ -580,9 +589,38 @@ const HomeView = ({ onLoginClick, setCurrentView, billingCycle, setBillingCycle,
         </div>
       </section>
 
+      {/* Trusted By Section */}
+      <section className={`${styles.trustedSection} ${styles.reveal}`}>
+        <div className={styles.trustedContainer}>
+          <p className={styles.trustedTitle}>{t('trusted.title')}</p>
+          <div className={styles.logoCloud}>
+            <div className={styles.logoCloudTrack}>
+              {/* First Set */}
+              <img src={logoOpenai} alt="OpenAI" className={styles.trustedLogo} />
+              <img src={logoAnthropic} alt="Anthropic" className={styles.trustedLogo} />
+              <img src={logoGemini} alt="Google Gemini" className={styles.trustedLogo} />
+              <img src={logoDeepseek} alt="DeepSeek" className={styles.trustedLogo} />
+              <img src={logoHubspot} alt="Hubspot" className={styles.trustedLogo} />
+              <img src={logoShopify} alt="Shopify" className={styles.trustedLogo} />
+              <img src={logoSlack} alt="Slack" className={styles.trustedLogo} />
+              <img src={logoStripe} alt="Stripe" className={styles.trustedLogo} />
+              {/* Duplicate Set for Seamless Loop */}
+              <img src={logoOpenai} alt="OpenAI" className={styles.trustedLogo} />
+              <img src={logoAnthropic} alt="Anthropic" className={styles.trustedLogo} />
+              <img src={logoGemini} alt="Google Gemini" className={styles.trustedLogo} />
+              <img src={logoDeepseek} alt="DeepSeek" className={styles.trustedLogo} />
+              <img src={logoHubspot} alt="Hubspot" className={styles.trustedLogo} />
+              <img src={logoShopify} alt="Shopify" className={styles.trustedLogo} />
+              <img src={logoSlack} alt="Slack" className={styles.trustedLogo} />
+              <img src={logoStripe} alt="Stripe" className={styles.trustedLogo} />
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* 2. SECTION: SHOWCASE V2 (User Requested) */}
       <section className={`${styles.showcaseV2} ${styles.reveal}`}>
-        <div className={styles.topPill} onClick={() => onLoginClick('register')} style={{ cursor: 'pointer' }}>
+        <div className={styles.topPill} onClick={() => onLoginClick('register')}>
           <div className={styles.pillAvatars}>
             <img src={avatar1} alt="Avatar 1" className={styles.pillAvatar} />
             <img src={avatar2} alt="Avatar 2" className={styles.pillAvatar} />
@@ -653,7 +691,7 @@ const HomeView = ({ onLoginClick, setCurrentView, billingCycle, setBillingCycle,
                     <span className={styles.rowScore}>{stat.score}</span>
                   </div>
                   <div className={styles.progressBar}>
-                    <div className={styles.progressFill} style={{ width: `${stat.score}%`, background: '#000000' }}></div>
+                    <div className={styles.progressFill} style={{ width: `${stat.score}%` }}></div>
                   </div>
                 </div>
               ))}
@@ -671,12 +709,12 @@ const HomeView = ({ onLoginClick, setCurrentView, billingCycle, setBillingCycle,
             </div>
             <div className={styles.insightsVisual}>
               <div className={styles.barChartV2}>
-                <div className={styles.chartBar} style={{ height: '40%', background: '#e5e7eb' }}></div>
-                <div className={styles.chartBar} style={{ height: '70%', background: '#9ca3af' }}></div>
-                <div className={styles.chartBar} style={{ height: '55%', background: '#4b5563' }}></div>
-                <div className={styles.chartBar} style={{ height: '90%', background: '#000000' }}></div>
-                <div className={styles.chartBar} style={{ height: '65%', background: '#6b7280' }}></div>
-                <div className={styles.chartBar} style={{ height: '80%', background: '#d1d5db' }}></div>
+                <div className={`${styles.chartBar} ${styles.bar1}`}></div>
+                <div className={`${styles.chartBar} ${styles.bar2}`}></div>
+                <div className={`${styles.chartBar} ${styles.bar3}`}></div>
+                <div className={`${styles.chartBar} ${styles.bar4}`}></div>
+                <div className={`${styles.chartBar} ${styles.bar5}`}></div>
+                <div className={`${styles.chartBar} ${styles.bar6}`}></div>
               </div>
               <div className={styles.insightsStats}>
                 <div className={styles.insightStatItem}>
@@ -713,7 +751,7 @@ const HomeView = ({ onLoginClick, setCurrentView, billingCycle, setBillingCycle,
       </section>
 
       {/* Logo Marquee (Restored as the 'Movement Bar') */}
-      <section className={styles.marqueeSection}>
+      <section className={`${styles.marqueeSection} ${styles.reveal}`}>
         <div className={styles.marquee}>
           <div className={styles.marqueeContent}>
             <img src={logoWhatsapp} alt="WhatsApp" className={styles.marqueeLogo} />
@@ -791,14 +829,14 @@ const HomeView = ({ onLoginClick, setCurrentView, billingCycle, setBillingCycle,
 
           {/* Card 3: AI-Powered Automation */}
           <div className={styles.modernCard}>
-             <div className={styles.orbitContainer}>
-              <div className={styles.orbitCenter} style={{ background: '#000' }}>
-                <img src={krakenIcon} alt="Kraken" style={{ width: '40px', height: '40px', objectFit: 'contain' }} />
+            <div className={styles.orbitContainer}>
+              <div className={`${styles.orbitCenter} ${styles.orbitCenterDark}`}>
+                <img src={krakenIcon} alt="Kraken" className={styles.orbitKrakenIcon} />
               </div>
-              <div className={`${styles.orbitIcon} ${styles.pos1}`} title="ChatGPT"><img src={logoOpenai} alt="ChatGPT" style={{ width: '24px' }} /></div>
-              <div className={`${styles.orbitIcon} ${styles.pos3}`} title="Gemini"><img src={logoGemini} alt="Gemini" style={{ width: '24px' }} /></div>
-              <div className={`${styles.orbitIcon} ${styles.pos4}`} title="Anthropic"><img src={logoAnthropic} alt="Anthropic" style={{ width: '24px' }} /></div>
-              <div className={`${styles.orbitIcon} ${styles.pos6}`} title="DeepSeek"><img src={logoDeepseek} alt="Deepseek" style={{ width: '24px' }} /></div>
+              <div className={`${styles.orbitIcon} ${styles.pos1}`} title="ChatGPT"><img src={logoOpenai} alt="ChatGPT" className={styles.orbitBrandLogo} /></div>
+              <div className={`${styles.orbitIcon} ${styles.pos3}`} title="Gemini"><img src={logoGemini} alt="Gemini" className={styles.orbitBrandLogo} /></div>
+              <div className={`${styles.orbitIcon} ${styles.pos4}`} title="Anthropic"><img src={logoAnthropic} alt="Anthropic" className={styles.orbitBrandLogo} /></div>
+              <div className={`${styles.orbitIcon} ${styles.pos6}`} title="DeepSeek"><img src={logoDeepseek} alt="Deepseek" className={styles.orbitBrandLogo} /></div>
               <div className={styles.orbitRing}></div>
               <div className={styles.orbitRingOuter}></div>
             </div>
@@ -857,7 +895,7 @@ const HomeView = ({ onLoginClick, setCurrentView, billingCycle, setBillingCycle,
       <section className={`${styles.stepperSection} ${styles.reveal}`}>
         <div className={styles.stepperContainer}>
           <div className={styles.stepperList}>
-            <h2 style={{ fontSize: '3rem', fontWeight: 900, marginBottom: '3rem' }}>{t('stepper.title')}</h2>
+            <h2 className={styles.sectionTitle}>{t('stepper.title')}</h2>
             {steps.map((step, index) => (
               <div 
                 key={index} 
@@ -874,9 +912,9 @@ const HomeView = ({ onLoginClick, setCurrentView, billingCycle, setBillingCycle,
             <img src={steps[activeStep].image} alt="Step" className={styles.stepperImage} />
           </div>
         </div>
-        <div style={{ display: 'flex', justifyContent: 'center', gap: '1.5rem', marginTop: '4rem' }}>
-          <button className={styles.btnPrimary} style={{ padding: '1.25rem 3rem' }} onClick={() => onLoginClick('register')}>{t('stepper.ctaPrimary')}</button>
-          <button className={styles.btnOutline} style={{ padding: '1.25rem 3rem' }} onClick={() => window.location.href = 'https://wa.me/your_number_here'}>{t('stepper.ctaSecondary')}</button>
+        <div className={styles.flexCenter}>
+          <button className={`${styles.btnPrimary} ${styles.btnLarge}`} onClick={() => onLoginClick('register')}>{t('stepper.ctaPrimary')}</button>
+          <button className={`${styles.btnOutline} ${styles.btnLarge}`} onClick={() => window.location.href = 'https://wa.me/your_number_here'}>{t('stepper.ctaSecondary')}</button>
         </div>
       </section>
 
@@ -922,16 +960,16 @@ const HomeView = ({ onLoginClick, setCurrentView, billingCycle, setBillingCycle,
         <div className={styles.hubMockupContainer}>
           <img src={fullShowcase} alt="Hub" className={styles.hubMockupMain} />
         </div>
-        <div style={{ textAlign: 'center', marginTop: '4rem' }}>
-          <p style={{ color: '#6b7280', marginBottom: '2rem', fontSize: '1.2rem' }}>{t('hub.footer')}</p>
-          <button className={styles.btnPrimary} style={{ padding: '1.25rem 4rem' }} onClick={() => onLoginClick('register')}>{t('hub.cta')}</button>
+        <div className={styles.sectionHeader}>
+          <p className={styles.hubFooterText}>{t('hub.footer')}</p>
+          <button className={`${styles.btnPrimary} ${styles.btnExtraLarge}`} onClick={() => onLoginClick('register')}>{t('hub.cta')}</button>
         </div>
       </section>
 
       {/* 8. SECTION: PASTEL SOLUTIONS */}
-      <section id="industries" className={`${styles.solutionsSection} ${styles.reveal}`}>
-        <div style={{ textAlign: 'center', marginBottom: '4rem' }}>
-          <h2 style={{ fontSize: '3rem', fontWeight: 900 }}>{t('solutions.title')}</h2>
+      <section className={`${styles.solutionsSection} ${styles.reveal}`}>
+        <div className={styles.sectionHeader}>
+          <h2 className={styles.sectionTitle}>{t('solutions.title')}</h2>
         </div>
         <div className={styles.solutionsGrid}>
           {(getTranslationObject('solutions.items') || []).map((item, idx) => {
@@ -949,8 +987,8 @@ const HomeView = ({ onLoginClick, setCurrentView, billingCycle, setBillingCycle,
 
       {/* 9. SECTION: MASONRY TESTIMONIALS */}
       <section className={`${styles.masonrySection} ${styles.reveal}`}>
-        <div style={{ textAlign: 'center', marginBottom: '4rem' }}>
-          <h2 style={{ fontSize: '3rem', fontWeight: 900 }}>{t('testimonials.title')}</h2>
+        <div className={styles.sectionHeader}>
+          <h2 className={styles.sectionTitle}>{t('testimonials.title')}</h2>
         </div>
         <div className={styles.masonryGrid}>
           {(getTranslationObject('testimonials.items') || []).map((testimonial, idx) => {
@@ -984,21 +1022,70 @@ const HomeView = ({ onLoginClick, setCurrentView, billingCycle, setBillingCycle,
             );
           })}
         </div>
-        <div style={{ textAlign: 'center', marginTop: '4rem' }}>
-          <button className={styles.btnPrimary} style={{ padding: '1.25rem 3rem' }} onClick={() => onLoginClick('register')}>{t('testimonials.cta')}</button>
+        <div className={styles.flexCenter}>
+          <button className={`${styles.btnPrimary} ${styles.btnLarge}`} onClick={() => onLoginClick('register')}>{t('testimonials.cta')}</button>
+        </div>
+      </section>
+
+      {/* Workflow Section */}
+      <section className={`${styles.workflowSection} ${styles.reveal}`}>
+        <div className={styles.workflowContainer}>
+          <div className={styles.sectionHeader}>
+            <h2 className={styles.sectionTitle}>{t('workflow.title')}</h2>
+            <p className={styles.sectionSubtitle}>{t('workflow.subtitle')}</p>
+          </div>
+          
+          <div className={styles.workflowGrid}>
+            {(getTranslationObject('workflow.steps') || []).map((step, idx) => (
+              <div key={idx} className={styles.workflowItem}>
+                <div className={styles.workflowIcon}>
+                  {idx === 0 ? <Target size={32} /> : idx === 1 ? <Cpu size={32} /> : <Rocket size={32} />}
+                </div>
+                <h4>{step.title}</h4>
+                <p>{step.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 10. SECTION: FAQ ACCORDION */}
+      <section className={`${styles.faqSection} ${styles.reveal}`}>
+        <div className={styles.sectionHeader}>
+          <h2 className={styles.sectionTitle}>{t('faq.title')}</h2>
+          <p className={styles.sectionSubtitle}>{t('faq.subtitle')}</p>
+        </div>
+        <div className={styles.faqContainer}>
+          {(getTranslationObject('faq.items') || []).map((item, idx) => (
+            <div 
+              key={idx} 
+              className={`${styles.faqItem} ${activeFaq === idx ? styles.faqItemActive : ''}`}
+              onClick={() => setActiveFaq(activeFaq === idx ? null : idx)}
+            >
+              <div className={styles.faqQuestion}>
+                <h4>{item.q}</h4>
+                <div className={styles.faqIcon}>
+                  <ChevronDown size={20} />
+                </div>
+              </div>
+              <div className={styles.faqAnswer}>
+                <p>{item.a}</p>
+              </div>
+            </div>
+          ))}
         </div>
       </section>
 
       {/* 11. SECTION: FINAL CTA V2 */}
-      <section className={`${styles.ctaV2} ${styles.reveal}`} style={{ background: '#000', padding: '12rem 1rem' }}>
-        <h2 className={styles.ctaV2Headline} style={{ color: '#fff', fontSize: '4.5rem', marginBottom: '4rem' }}>
+      <section className={`${styles.ctaV2Final} ${styles.reveal}`}>
+        <h2 className={styles.ctaV2FinalHeadline}>
           {t('finalCta.title')}
         </h2>
-        <div style={{ display: 'flex', justifyContent: 'center', gap: '2rem' }}>
-          <button className={styles.btnPrimary} style={{ background: '#fff', color: '#000', padding: '1.5rem 5rem', fontSize: '1.25rem', borderRadius: '12px' }} onClick={() => onLoginClick('register')}>{t('finalCta.ctaPrimary')}</button>
-          <button className={styles.btnOutline} style={{ borderColor: '#fff', color: '#fff', padding: '1.5rem 5rem', fontSize: '1.25rem', borderRadius: '12px' }} onClick={() => window.location.href = 'https://wa.me/your_number_here'}>{t('finalCta.ctaSecondary')}</button>
+        <div className={styles.ctaV2Actions}>
+          <button className={styles.btnV2Primary} onClick={() => onLoginClick('register')}>{t('finalCta.ctaPrimary')}</button>
+          <button className={styles.btnV2Outline} onClick={() => window.location.href = 'https://wa.me/your_number_here'}>{t('finalCta.ctaSecondary')}</button>
         </div>
-        <div className={styles.ctaV2Trust} style={{ marginTop: '6rem', color: 'rgba(255,255,255,0.5)' }}>
+        <div className={styles.ctaV2Trust}>
           <div className={styles.trustItem}><CheckCircle2 size={20} /> {t('finalCta.trust.0')}</div>
           <div className={styles.trustItem}><CheckCircle2 size={20} /> {t('finalCta.trust.1')}</div>
           <div className={styles.trustItem}><CheckCircle2 size={20} /> {t('finalCta.trust.2')}</div>

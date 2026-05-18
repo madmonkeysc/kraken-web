@@ -68,6 +68,26 @@ export const translations = {
       login: "Iniciar sesión",
       getStarted: "Empezar ahora"
     },
+    trusted: {
+      title: "Impulsando el crecimiento de las empresas más innovadoras"
+    },
+    workflow: {
+      title: "Cómo funciona el ecosistema Kraken",
+      subtitle: "Nuestros agentes no solo responden; colaboran entre sí para resolver tareas complejas de principio a fin.",
+      steps: [
+        { title: "Captación", desc: "El Agente de Ventas identifica al cliente y califica su interés inicial." },
+        { title: "Análisis", desc: "El Agente de Datos procesa la solicitud y verifica disponibilidad en tiempo real." },
+        { title: "Resolución", desc: "El Agente de Soporte cierra la transacción o agenda la cita automáticamente." }
+      ]
+    },
+    stats: {
+      items: [
+        { number: "98%", label: "Tasa de satisfacción" },
+        { number: "24/7", label: "Disponibilidad total" },
+        { number: "10x", label: "Aumento en ventas" },
+        { number: "2s", label: "Tiempo de respuesta" }
+      ]
+    },
     hero: {
       badge: "LA NUEVA ERA DE LA IA HA LLEGADO",
       titleStart: "TOMA EL",
@@ -183,6 +203,36 @@ export const translations = {
         { text: "\"La mejor inversión que hemos hecho este año. Los agentes de IA son ahora el pilar de nuestro soporte.\"", name: "Maria Arias", role: "COO, GreenMarket" },
         { text: "\"Poder atender en 95 idiomas nos permitió abrir 5 nuevos mercados en un solo mes.\"", name: "Roberto Blanc", role: "Founder, GlobalLogistics" },
         { text: "\"Seguridad, rapidez y precisión. Justo lo que necesitábamos para escalar sin fricciones.\"", name: "Sofía Luna", role: "Product Mgr, FinSec" }
+      ]
+    },
+    faq: {
+      title: "Preguntas Frecuentes",
+      subtitle: "Todo lo que necesitas saber sobre Kraken AI y cómo puede transformar tu negocio.",
+      items: [
+        {
+          q: "¿Qué es Kraken AI?",
+          a: "Kraken AI es una plataforma omnicanal que utiliza inteligencia artificial avanzada para automatizar la atención al cliente y las ventas en canales como WhatsApp, Instagram y Messenger, permitiendo a las empresas operar 24/7 sin intervención humana constante."
+        },
+        {
+          q: "¿Necesito conocimientos de programación?",
+          a: "Para nada. Hemos diseñado Kraken para que sea intuitivo. Puedes configurar y entrenar a tus agentes usando nuestro constructor visual y cargando tus propios documentos o URLs, sin escribir una sola línea de código."
+        },
+        {
+          q: "¿En qué idiomas puede atender el agente?",
+          a: "Nuestros agentes son políglotas nativos. Pueden entender y responder fluidamente en más de 95 idiomas, detectando automáticamente el idioma del usuario en tiempo real."
+        },
+        {
+          q: "¿Se puede integrar con mi CRM actual?",
+          a: "Sí. Ofrecemos integraciones nativas con herramientas como HubSpot, Salesforce y Shopify, además de una potente API y webhooks para conectar con prácticamente cualquier software que utilices."
+        },
+        {
+          q: "¿Qué tan segura es mi información?",
+          a: "La seguridad es nuestra prioridad. Utilizamos encriptación de grado bancario (AES-256) y cumplimos con los estándares internacionales de privacidad. Tus datos nunca se utilizan para entrenar modelos públicos; son 100% privados."
+        },
+        {
+          q: "¿Hay algún límite de conversaciones?",
+          a: "Cada plan tiene una capacidad generosa de créditos mensuales. Si necesitas más, puedes escalar tu plan fácilmente o adquirir paquetes de créditos adicionales según tu crecimiento."
+        }
       ]
     },
     finalCta: {
@@ -3037,7 +3087,7 @@ export const translations = {
         readFull: "Leer artículo completo",
         backLink: "Volver al blog",
         ctaArticleTitle: "¿Listo para implementar estas estrategias?",
-        ctaArticleText: "No dejes que tu competencia se adelante. Empieza a usar Kraken AI hoy mismo.",
+        ctaArticleText: "No dejes que tu competencia se te adelante. Empieza a usar Kraken AI hoy mismo.",
         ctaArticleBtn: "Probar Kraken AI Gratis",
         cta: { title: "¿Quieres dominar tu industria?", text: "Únete a Kraken AI hoy y pon tu negocio en piloto automático con agentes de IA de clase mundial.", btn: "Empezar Ahora Gratis" }
       },
@@ -3123,6 +3173,26 @@ export const translations = {
       docs: "Docs",
       login: "Log in",
       getStarted: "Get started"
+    },
+    trusted: {
+      title: "Powering the growth of the most innovative companies"
+    },
+    workflow: {
+      title: "How the Kraken Ecosystem Works",
+      subtitle: "Our agents don't just respond; they collaborate with each other to solve complex tasks from start to finish.",
+      steps: [
+        { title: "Lead Capture", desc: "The Sales Agent identifies the client and qualifies their initial interest." },
+        { title: "Analysis", desc: "The Data Agent processes the request and verifies availability in real-time." },
+        { title: "Resolution", desc: "The Support Agent closes the transaction or schedules the appointment automatically." }
+      ]
+    },
+    stats: {
+      items: [
+        { number: "98%", label: "Satisfaction Rate" },
+        { number: "24/7", label: "Total Availability" },
+        { number: "10x", label: "Sales Increase" },
+        { number: "2s", label: "Response Time" }
+      ]
     },
     hero: {
       badge: "THE NEW AI ERA HAS ARRIVED",
@@ -3239,6 +3309,36 @@ export const translations = {
         { text: "\"The best investment we've made this year. AI agents are now the backbone of our support.\"", name: "Maria Arias", role: "COO, GreenMarket" },
         { text: "\"Being able to serve in 95 languages allowed us to open 5 new markets in a single month.\"", name: "Roberto Blanc", role: "Founder, GlobalLogistics" },
         { text: "\"Security, speed, and precision. Exactly what we needed to scale without friction.\"", name: "Sofía Luna", role: "Product Mgr, FinSec" }
+      ]
+    },
+    faq: {
+      title: "Frequently Asked Questions",
+      subtitle: "Everything you need to know about Kraken AI and how it can transform your business.",
+      items: [
+        {
+          q: "What is Kraken AI?",
+          a: "Kraken AI is an omnichannel platform that uses advanced artificial intelligence to automate customer service and sales on channels like WhatsApp, Instagram, and Messenger, allowing businesses to operate 24/7 without constant human intervention."
+        },
+        {
+          q: "Do I need programming knowledge?",
+          a: "Not at all. We've designed Kraken to be intuitive. You can set up and train your agents using our visual builder and by uploading your own documents or URLs, without writing a single line of code."
+        },
+        {
+          q: "What languages can the agent speak?",
+          a: "Our agents are native polyglots. They can fluently understand and respond in over 95 languages, automatically detecting the user's language in real-time."
+        },
+        {
+          q: "Can it integrate with my current CRM?",
+          a: "Yes. We offer native integrations with tools like HubSpot, Salesforce, and Shopify, as well as a powerful API and webhooks to connect with virtually any software you use."
+        },
+        {
+          q: "How secure is my information?",
+          a: "Security is our priority. We use bank-grade encryption (AES-256) and comply with international privacy standards. Your data is never used to train public models; it is 100% private."
+        },
+        {
+          q: "Is there a limit on conversations?",
+          a: "Each plan has a generous monthly credit capacity. If you need more, you can easily scale your plan or purchase additional credit packs according to your growth."
+        }
       ]
     },
     finalCta: {
