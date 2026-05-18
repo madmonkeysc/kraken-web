@@ -782,8 +782,8 @@ const HomeView = ({ onLoginClick, setCurrentView, billingCycle, setBillingCycle,
       {/* 3. SECTION: MODERN SUPPORT TEAMS (User Requested) */}
       <section className={`${styles.modernSupport} ${styles.reveal}`}>
         <div className={styles.modernHeader}>
-          <h2>{t('support.title')}</h2>
-          <p>{t('support.desc')}</p>
+          <h2>{t('landingSupport.title')}</h2>
+          <p>{t('landingSupport.desc')}</p>
         </div>
 
         <div className={styles.modernGrid}>
@@ -803,8 +803,8 @@ const HomeView = ({ onLoginClick, setCurrentView, billingCycle, setBillingCycle,
               <div className={styles.orbitRingOuter}></div>
             </div>
             <div className={styles.modernCardContent}>
-              <h3>{t('support.cards.0.title')}</h3>
-              <p>{t('support.cards.0.desc')}</p>
+              <h3>{t('landingSupport.cards.0.title')}</h3>
+              <p>{t('landingSupport.cards.0.desc')}</p>
             </div>
           </div>
 
@@ -822,8 +822,8 @@ const HomeView = ({ onLoginClick, setCurrentView, billingCycle, setBillingCycle,
               <div className={styles.intIcon}><img src={logoAirtable} alt="Airtable" /></div>
             </div>
             <div className={styles.modernCardContent}>
-              <h3>{t('support.cards.1.title')}</h3>
-              <p>{t('support.cards.1.desc')}</p>
+              <h3>{t('landingSupport.cards.1.title')}</h3>
+              <p>{t('landingSupport.cards.1.desc')}</p>
             </div>
           </div>
 
@@ -841,8 +841,8 @@ const HomeView = ({ onLoginClick, setCurrentView, billingCycle, setBillingCycle,
               <div className={styles.orbitRingOuter}></div>
             </div>
             <div className={styles.modernCardContent}>
-              <h3>{t('support.cards.2.title')}</h3>
-              <p>{t('support.cards.2.desc')}</p>
+              <h3>{t('landingSupport.cards.2.title')}</h3>
+              <p>{t('landingSupport.cards.2.desc')}</p>
             </div>
           </div>
         </div>

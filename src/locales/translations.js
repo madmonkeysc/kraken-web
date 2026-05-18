@@ -134,7 +134,7 @@ export const translations = {
         { value: "<2s", label: "Tiempo de Respuesta" }
       ]
     },
-    support: {
+    landingSupport: {
       title: "Diseñado para Equipos de Soporte Modernos",
       desc: "Combina el poder de la IA con el talento humano para escalar tu atención al cliente de manera inteligente y sin fricciones.",
       cards: [
@@ -3240,7 +3240,7 @@ export const translations = {
         { value: "<2s", label: "Response Time" }
       ]
     },
-    support: {
+    landingSupport: {
       title: "Designed for Modern Support Teams",
       desc: "Combine the power of AI with human talent to scale your customer service intelligently and frictionlessly.",
       cards: [
