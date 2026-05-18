@@ -19,7 +19,7 @@ const App = () => {
   const handleLoginClick = (mode = 'login') => {
     // In the future, this will redirect to the Amazon URL
     // For now, we can just show a message or keep it as is.
-    window.location.href = 'https://app.krakenai.com'; // Placeholder for the app URL
+    window.location.href = 'https://app.usakraken.com'; // Redirect to the live app URL
   };
 
   return (
