@@ -143,7 +143,6 @@ const Landing = ({ onLoginClick }) => {
         { title: t('nav.resourcesItems.0.title'), desc: t('nav.resourcesItems.0.desc'), icon: <BookOpen size={20} />, view: 'docs' },
         { title: t('nav.resourcesItems.1.title'), desc: t('nav.resourcesItems.1.desc'), icon: <Zap size={20} />, view: 'use-cases' },
         { title: t('nav.resourcesItems.2.title'), desc: t('nav.resourcesItems.2.desc'), icon: <FileText size={20} />, view: 'blog' },
-        { title: t('nav.resourcesItems.4.title'), desc: t('nav.resourcesItems.4.desc'), icon: <Search size={20} />, view: 'resources' },
       ]
     },
     { 
@@ -158,7 +157,6 @@ const Landing = ({ onLoginClick }) => {
       ]
     },
     { label: t('nav.pricing'), view: 'pricing' },
-    { label: t('nav.docs'), view: 'docs' },
   ];
 
   const handleNavClick = (item) => {
