@@ -443,7 +443,7 @@ const Landing = ({ onLoginClick }) => {
       {/* Footer Parity with BotDesk.co */}
       <footer className={styles.footer}>
         <div className={styles.socialContainer}>
-          <p className={styles.socialTitle}>{t('footer.socialTitle')}</p>
+          <p className={styles.footerSocialTitle}>{t('footer.socialTitle')}</p>
           <div className={styles.socialLinks}>
             <a href="#" className={styles.socialIcon} aria-label="LinkedIn"><Linkedin size={20} /></a>
             <a href="#" className={styles.socialIcon} aria-label="Facebook"><Facebook size={20} /></a>
