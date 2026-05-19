@@ -109,7 +109,20 @@ const Landing = ({ onLoginClick }) => {
   const [blogPostSlug, setBlogPostSlug] = useState(null);
   const [billingCycle, setBillingCycle] = useState('monthly');
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [activeMobileSubmenu, setActiveMobileSubmenu] = useState(null);
   const { language, setLanguage, t } = useLanguage();
+
+  useEffect(() => {
+    if (isMobileMenuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+      setActiveMobileSubmenu(null);
+    }
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [isMobileMenuOpen]);
 
   const toggleLanguage = () => {
     const newLang = language === 'ES' ? 'EN' : 'ES';
@@ -393,46 +406,86 @@ const Landing = ({ onLoginClick }) => {
           </div>
         </div>
 
-        {/* Mobile Menu Overlay */}
-        {isMobileMenuOpen && (
-          <div className={styles.mobileMenu}>
-            <div className={styles.mobileNavLinks}>
-              {navItems.map((item, idx) => (
-                <div key={idx} className={styles.mobileNavItem}>
-                  <div 
-                    className={styles.mobileNavLink}
-                    onClick={() => {
-                      if (!item.hasSubmenu) {
-                        handleNavClick(item);
-                      }
-                    }}
-                  >
-                    {item.label}
-                  </div>
+      </nav>
+
+      {/* Mobile Menu Overlay */}
+      {isMobileMenuOpen && (
+        <div className={styles.mobileMenu}>
+          <div className={styles.mobileMenuHeader}>
+            <img 
+              src={krakenLogo} 
+              alt="Kraken AI" 
+              className={styles.mobileMenuLogo} 
+              onClick={() => { setCurrentView('home'); setIsMobileMenuOpen(false); }} 
+            />
+            <button className={styles.mobileMenuClose} onClick={() => setIsMobileMenuOpen(false)}>
+              <X size={24} />
+            </button>
+          </div>
+
+          <div className={styles.mobileNavLinks}>
+            {navItems.map((item, idx) => (
+              <div key={idx} className={styles.mobileNavItem}>
+                <div 
+                  className={styles.mobileNavLinkContainer}
+                  onClick={() => {
+                    if (item.hasSubmenu) {
+                      setActiveMobileSubmenu(activeMobileSubmenu === idx ? null : idx);
+                    } else {
+                      handleNavClick(item);
+                    }
+                  }}
+                >
+                  <span className={styles.mobileNavLink}>{item.label}</span>
                   {item.hasSubmenu && (
-                    <div className={styles.mobileSubmenu}>
-                      {item.items.map((sub, sidx) => (
-                        <div 
-                          key={sidx} 
-                          className={styles.mobileSubItem}
-                          onClick={() => handleNavClick(sub)}
-                        >
-                          <div className={styles.mobileSubIcon}>{sub.icon}</div>
-                          <span>{sub.title}</span>
-                        </div>
-                      ))}
-                    </div>
+                    <ChevronDown 
+                      size={18} 
+                      className={`${styles.mobileChevron} ${activeMobileSubmenu === idx ? styles.mobileChevronRotated : ''}`} 
+                    />
                   )}
                 </div>
-              ))}
-            </div>
-            <div className={styles.mobileAuth}>
-              <button className={styles.btnOutline} onClick={() => onLoginClick('login')}>{t('nav.login')}</button>
-              <button className={styles.btnPrimary} onClick={() => onLoginClick('register')}>{t('nav.getStarted')}</button>
-            </div>
+                
+                {item.hasSubmenu && (
+                  <div className={`${styles.mobileSubmenu} ${activeMobileSubmenu === idx ? styles.mobileSubmenuOpen : ''}`}>
+                    {item.items.map((sub, sidx) => (
+                      <div 
+                        key={sidx} 
+                        className={styles.mobileSubItem}
+                        onClick={() => handleNavClick(sub)}
+                      >
+                        {sub.icon && <div className={styles.mobileSubIcon}>{sub.icon}</div>}
+                        <span>{sub.title}</span>
+                      </div>
+                    ))}
+                  </div>
+                )}
+              </div>
+            ))}
           </div>
-        )}
-      </nav>
+
+          <div className={styles.mobileAuth}>
+            <div className={styles.mobileLangSection}>
+              <span className={styles.mobileLangLabel}>
+                {language === 'ES' ? 'Idioma' : 'Language'}
+              </span>
+              <div className={styles.mobileLangToggle} onClick={toggleLanguage}>
+                <div className={`${styles.mobileLangOption} ${language === 'EN' ? styles.activeLang : ''}`}>
+                  EN
+                </div>
+                <div className={`${styles.mobileLangOption} ${language === 'ES' ? styles.activeLang : ''}`}>
+                  ES
+                </div>
+              </div>
+            </div>
+            <button className={styles.btnOutline} onClick={() => { setIsMobileMenuOpen(false); onLoginClick('login'); }}>
+              {t('nav.login')}
+            </button>
+            <button className={styles.btnPrimary} onClick={() => { setIsMobileMenuOpen(false); onLoginClick('register'); }}>
+              {t('nav.getStarted')}
+            </button>
+          </div>
+        </div>
+      )}
 
       <main>
         {renderCurrentView()}
