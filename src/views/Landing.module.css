@@ -1742,8 +1742,301 @@
 
 @media (max-width: 1024px) {
   .pricingGridMain { grid-template-columns: repeat(2, 1fr); }
-  .testimonialsGridV2 { grid-template-columns: 1fr; }
+  .testimonialsGridV2 { grid-template-columns: 1fr 1fr; }
   .addonsGridV2 { grid-template-columns: 1fr; }
+  .pricingHeroTitle { font-size: 3rem; }
+  .sectionTitleBlack { font-size: 2.25rem; }
+  .socialTitle { font-size: 2.25rem; }
+  .finalCTATitle { font-size: 3rem; }
+}
+
+/* ===== MOBILE: Pricing Full Overhaul ===== */
+@media (max-width: 768px) {
+  .detailedPricingContainer {
+    padding-top: 60px;
+  }
+
+  .pricingHero {
+    padding: 3rem 1rem 2rem;
+  }
+
+  .pricingHeroTitle {
+    font-size: 2.25rem;
+    letter-spacing: -0.03em;
+    margin-bottom: 1rem;
+  }
+
+  .pricingHeroSubtitle {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .billingToggle {
+    flex-direction: row;
+  }
+
+  .toggleBtn {
+    padding: 8px 16px;
+    font-size: 0.8125rem;
+  }
+
+  /* Pricing Cards → 1 column on mobile */
+  .pricingGridMain {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    margin: 2rem auto 4rem;
+    padding: 0 1rem;
+  }
+
+  .pricingCardNew {
+    padding: 2rem 1.25rem;
+  }
+
+  .cardDesc {
+    height: auto;
+    min-height: unset;
+  }
+
+  .priceValue {
+    font-size: 2.5rem;
+  }
+
+  .cardPlanName {
+    font-size: 1.25rem;
+  }
+
+  /* Comparison Table → Horizontal scroll */
+  .tableSection {
+    padding: 4rem 0;
+  }
+
+  .tableTitleArea {
+    margin-bottom: 2rem;
+    padding: 0 1rem;
+  }
+
+  .sectionTitleBlack {
+    font-size: 1.75rem;
+  }
+
+  .sectionSubtitleGrey {
+    font-size: 0.9375rem;
+  }
+
+  .comparisonTableWrapper {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    border-radius: 0;
+    border-left: none;
+    border-right: none;
+    margin: 0;
+  }
+
+  .comparisonTable {
+    min-width: 800px;
+  }
+
+  .featureCol {
+    width: 180px;
+    font-size: 0.9375rem;
+    padding-left: 1rem !important;
+  }
+
+  .featureNameCol {
+    padding-left: 1rem !important;
+    font-size: 0.8125rem;
+  }
+
+  .tableHeaderRow th {
+    padding: 1.5rem 0.5rem;
+  }
+
+  .thName {
+    font-size: 0.875rem;
+  }
+
+  .thPrice {
+    font-size: 1.125rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .thButton {
+    max-width: 100px;
+    padding: 6px 10px !important;
+    font-size: 0.6875rem !important;
+  }
+
+  .tableDataRow td {
+    padding: 1rem 0.5rem;
+    font-size: 0.8125rem;
+  }
+
+  .tableFooterRow td {
+    padding: 1.5rem 0.5rem;
+  }
+
+  .tableFooterBtn {
+    max-width: 100px;
+    font-size: 0.75rem !important;
+    padding: 6px 10px !important;
+  }
+
+  /* Add-ons → stacked layout */
+  .addonsSectionV2 {
+    padding: 4rem 1rem;
+  }
+
+  .addonsTitleLarge {
+    font-size: 1.75rem;
+    margin-bottom: 2rem;
+  }
+
+  .addonCardV2 {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1.25rem;
+  }
+
+  .addonActionBtn {
+    width: 100%;
+    text-align: center;
+    padding: 10px 16px;
+  }
+
+  /* Social Proof */
+  .socialProofSection {
+    padding: 4rem 1rem;
+  }
+
+  .socialTitle {
+    font-size: 1.75rem;
+    margin-bottom: 3rem;
+  }
+
+  .testimonialsGridV2 {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .statsValue {
+    font-size: 2.5rem;
+  }
+
+  .statsCard {
+    padding: 2rem 1.5rem;
+  }
+
+  .tQuote {
+    font-size: 1.0625rem;
+  }
+
+  .testimonialCardV2 {
+    padding: 1.75rem;
+  }
+
+  /* FAQ */
+  .faqSectionV2 {
+    padding: 4rem 1rem;
+  }
+
+  .faqTitleV2 {
+    font-size: 1.75rem;
+    margin-bottom: 2rem;
+  }
+
+  .faqTriggerV2 {
+    font-size: 1rem;
+    padding: 1.25rem 0;
+  }
+
+  .faqContentV2 {
+    font-size: 0.9375rem;
+  }
+
+  /* Final CTA */
+  .finalCTASection {
+    padding: 5rem 1.5rem;
+  }
+
+  .finalCTATitle {
+    font-size: 2rem;
+    line-height: 1.15;
+  }
+
+  .finalCTASubtitle {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .finalCTAButtons {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .btnPrimaryLarge,
+  .btnOutlineLarge {
+    width: 100%;
+    max-width: 320px;
+    padding: 1rem 2rem;
+    font-size: 1rem;
+  }
+
+  .finalCTABadges {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+}
+
+/* ===== SMALL MOBILE: Extra tight ===== */
+@media (max-width: 480px) {
+  .pricingHeroTitle {
+    font-size: 1.75rem;
+  }
+
+  .pricingCardNew {
+    padding: 1.5rem 1rem;
+  }
+
+  .priceValue {
+    font-size: 2rem;
+  }
+
+  .cardFeatureItem {
+    font-size: 0.8125rem;
+    gap: 0.5rem;
+  }
+
+  .toggleBtn {
+    padding: 6px 12px;
+    font-size: 0.75rem;
+  }
+
+  .saveBadge {
+    font-size: 0.6875rem;
+  }
+
+  .addonsTitleLarge {
+    font-size: 1.5rem;
+  }
+
+  .faqTitleV2 {
+    font-size: 1.5rem;
+  }
+
+  .socialTitle {
+    font-size: 1.5rem;
+  }
+
+  .finalCTATitle {
+    font-size: 1.5rem;
+  }
+
+  .statsValue {
+    font-size: 2rem;
+  }
 }
 
 /* --- HOME VIEW RECONSTRUCTION (BotDesk Parity) --- */
