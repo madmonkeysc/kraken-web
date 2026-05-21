@@ -318,16 +318,31 @@
   .navbar {
     padding: 0 1.5rem;
     height: 80px;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
   }
 
-  .navLinks, .authButtons {
-    display: none;
+  .logoContainer {
+    grid-column: 1;
+    justify-self: start;
+  }
+
+  .navActionsWrapper {
+    grid-column: 2;
+    justify-self: center;
   }
 
   .mobileToggle {
     display: flex;
     align-items: center;
     justify-content: center;
+    grid-column: 3;
+    justify-self: end;
+  }
+
+  .navLinks, .authButtons {
+    display: none;
   }
 }
 
