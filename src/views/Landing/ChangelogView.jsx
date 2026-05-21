@@ -4,43 +4,19 @@ import styles from '../Landing.module.css';
 import { useLanguage } from '../../context/LanguageContext';
 
 const ChangelogView = () => {
-  const { t } = useLanguage();
+  const { t, getTranslationObject } = useLanguage();
 
-  const updates = [
-    {
-      version: '3.2.0',
-      date: '12 Mayo, 2024',
-      title: 'Kraken Voice v1.0 Launch',
-      type: 'major',
-      items: [
-        'Lanzamiento oficial de la API de Voz con latencia ultra-baja (<500ms).',
-        'Soporte para 12 acentos diferentes en español (MX, ES, AR, CO, etc).',
-        'Detección automática de interrupciones para una conversación más fluida.'
-      ]
-    },
-    {
-      version: '3.1.5',
-      date: '05 Mayo, 2024',
-      title: 'WhatsApp Multi-Device Sync',
-      type: 'feature',
-      items: [
-        'Sincronización masiva de historial de chats para entrenamiento de IA.',
-        'Mejora en la estabilidad de la conexión con WhatsApp Business API.',
-        'Nuevos webhooks para eventos de lectura y entrega.'
-      ]
-    },
-    {
-      version: '3.1.0',
-      date: '28 Abril, 2024',
-      title: 'Security Patch & UI Polish',
-      type: 'fix',
-      items: [
-        'Actualización de protocolos de cifrado AES-256 para almacenamiento de logs.',
-        'Rediseño completo de la sección de analíticas para mejor legibilidad.',
-        'Corrección de errores menores en la integración con Shopify.'
-      ]
-    }
-  ];
+  const updates = getTranslationObject('changelogPage.updates') || [];
+
+  const renderWithGradient = (text) => {
+    if (!text) return null;
+    return text.split(/(\{.*?\})/).map((part, i) => {
+      if (part.startsWith('{') && part.endsWith('}')) {
+        return <span key={i} className={styles.textGradient}>{part.slice(1, -1)}</span>;
+      }
+      return part;
+    });
+  };
 
   const getTypeStyle = (type) => {
     switch (type) {
@@ -56,9 +32,7 @@ const ChangelogView = () => {
       <header className={styles.viewHeader}>
         <div className={styles.productBadge} style={{ position: 'static', display: 'inline-block', marginBottom: '1rem' }}>CHANGELOG</div>
         <h1 className={styles.viewTitle}>
-          {t('changelogPage.title').split('{Cambios}')[0]}
-          <span className={styles.textGradient}>Registro de Cambios</span>
-          {t('changelogPage.title').split('{Cambios}')[1]}
+          {renderWithGradient(t('changelogPage.title'))}
         </h1>
         <p className={styles.viewSubtitle}>
           {t('changelogPage.subtitle')}

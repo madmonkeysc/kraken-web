@@ -5,7 +5,7 @@ import { useLanguage } from '../../context/LanguageContext';
 import { blogPosts } from './blogData';
 
 const ResourcesView = ({ onNavigate }) => {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
 
   const resources = [
     {
@@ -38,7 +38,8 @@ const ResourcesView = ({ onNavigate }) => {
     }
   ];
 
-  const latestPosts = blogPosts.slice(0, 2);
+  const currentPosts = blogPosts[language] || blogPosts.ES;
+  const latestPosts = currentPosts.slice(0, 2);
 
   return (
     <div className={styles.viewContainer}>

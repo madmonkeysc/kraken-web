@@ -6,6 +6,16 @@ import styles from '../Landing.module.css';
 const CompanyView = () => {
   const { t } = useLanguage();
 
+  const renderWithGradient = (text) => {
+    if (!text) return null;
+    return text.split(/(\{.*?\})/).map((part, i) => {
+      if (part.startsWith('{') && part.endsWith('}')) {
+        return <span key={i} className={styles.textGradient}>{part.slice(1, -1)}</span>;
+      }
+      return part;
+    });
+  };
+
   return (
     <div className={styles.viewContainer}>
       <header className={styles.viewHeader}>
@@ -13,10 +23,7 @@ const CompanyView = () => {
           {t('companyPage.badge')}
         </div>
         <h1 className={styles.viewTitle}>
-          {t('companyPage.title').split('Interacción')[0]}
-          <span className={styles.textGradient}>
-            {t('companyPage.title').includes('Interacción') ? 'Interacción' : 'Interaction'}
-          </span>
+          {renderWithGradient(t('companyPage.title'))}
         </h1>
         <p className={styles.viewSubtitle}>
           {t('companyPage.subtitle')}
@@ -65,10 +72,7 @@ const CompanyView = () => {
       <section className={styles.companySection} style={{ marginTop: '10rem' }}>
         <div style={{ textAlign: 'center', marginBottom: '6rem' }}>
           <h2 style={{ fontSize: '3.5rem', fontWeight: 900 }}>
-            {t('companyPage.manifesto.title').split('Manifiesto')[0]}
-            <span className={styles.textGradient}>
-              {t('companyPage.manifesto.title').includes('Manifiesto') ? 'Manifiesto' : 'Manifesto'}
-            </span>
+            {renderWithGradient(t('companyPage.manifesto.title'))}
           </h2>
           <p style={{ maxWidth: '800px', margin: '2rem auto', fontSize: '1.25rem', color: '#666', lineHeight: 1.8 }}>
             {t('companyPage.manifesto.desc')}

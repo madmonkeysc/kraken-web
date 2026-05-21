@@ -2,19 +2,21 @@ import React, { useState } from 'react';
 import styles from './FloatingAssistant.module.css';
 import { X, Send, Sparkles, DollarSign, Bot, MessageSquare, Layout } from 'lucide-react';
 import krakenIcon from '../assets/kraken-icon-white.png';
+import { useLanguage } from '../context/LanguageContext';
 
 const FloatingAssistant = ({ onLoginClick }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [view, setView] = useState('menu'); // 'menu' or 'chat'
+  const { t } = useLanguage();
   const [messages, setMessages] = useState([
-    { id: 1, text: '¡Hola! Soy tu asistente KRAKEN.', sent: false }
+    { id: 1, text: t('docs.assistant.welcome'), sent: false }
   ]);
   const [input, setInput] = useState('');
 
   const menuOptions = [
-    { label: 'Hablar con agente de IA', action: () => setView('chat'), icon: <Bot size={20} /> },
-    { label: 'Ir directo a WhatsApp', action: () => window.location.href = 'https://wa.me/your_number_here', icon: <MessageSquare size={20} /> },
-    { label: 'Empezar a crear sus agente IA', action: () => onLoginClick('register'), icon: <Sparkles size={20} /> },
+    { label: t('docs.assistant.talkToAI'), action: () => setView('chat'), icon: <Bot size={20} /> },
+    { label: t('docs.assistant.goToWhatsapp'), action: () => window.location.href = 'https://wa.me/your_number_here', icon: <MessageSquare size={20} /> },
+    { label: t('docs.assistant.createAgent'), action: () => onLoginClick('register'), icon: <Sparkles size={20} /> },
   ];
 
   const handleSend = (e) => {
@@ -28,7 +30,7 @@ const FloatingAssistant = ({ onLoginClick }) => {
     setTimeout(() => {
       setMessages(prev => [...prev, { 
         id: Date.now() + 1, 
-        text: 'Esa es una excelente pregunta. Estamos trabajando en integrar más capacidades de resolución automática. ¿Deseas que contacte a un humano?', 
+        text: t('docs.assistant.aiReply'), 
         sent: false 
       }]);
     }, 1000);
@@ -52,8 +54,8 @@ const FloatingAssistant = ({ onLoginClick }) => {
                 <Sparkles size={20} color="#FCF200" />
               </div>
               <div className={styles.headerText}>
-                <span className={styles.headerTitle}>Asistente KRAKEN</span>
-                <span className={styles.headerStatus}>IA Activa • Soporte 24/7</span>
+                <span className={styles.headerTitle}>{t('docs.assistant.title')}</span>
+                <span className={styles.headerStatus}>{t('docs.assistant.status')}</span>
               </div>
             </div>
             <button onClick={() => setIsOpen(false)} className={styles.closeBtn}>
@@ -63,7 +65,7 @@ const FloatingAssistant = ({ onLoginClick }) => {
 
           {view === 'menu' ? (
             <div className={styles.menuContainer}>
-              <h4 style={{ marginBottom: '0.5rem', color: '#111827' }}>¿Cómo podemos ayudarte hoy?</h4>
+              <h4 style={{ marginBottom: '0.5rem', color: '#111827' }}>{t('docs.assistant.howHelp')}</h4>
               {menuOptions.map((option, idx) => (
                 <button 
                   key={idx} 
@@ -82,7 +84,7 @@ const FloatingAssistant = ({ onLoginClick }) => {
                   onClick={() => setView('menu')} 
                   className={styles.backBtn}
                 >
-                  ← Volver al menú
+                  {t('docs.assistant.backToMenu')}
                 </button>
                 {messages.map(msg => (
                   <div key={msg.id} className={`${styles.message} ${msg.sent ? styles.sent : styles.received}`}>
@@ -94,7 +96,7 @@ const FloatingAssistant = ({ onLoginClick }) => {
               <form onSubmit={handleSend} className={styles.inputForm}>
                 <input 
                   type="text" 
-                  placeholder="Escribe tu duda..."
+                  placeholder={t('docs.assistant.placeholder')}
                   value={input}
                   onChange={e => setInput(e.target.value)}
                   className={styles.inputField}

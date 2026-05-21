@@ -6,7 +6,19 @@ import { useLanguage } from '../../context/LanguageContext';
 
 const SuccessStoriesView = () => {
   const [selectedStory, setSelectedStory] = useState(null);
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
+
+  const currentStories = successStories[language] || successStories.ES;
+
+  const renderWithGradient = (text) => {
+    if (!text) return null;
+    return text.split(/(\{.*?\})/).map((part, i) => {
+      if (part.startsWith('{') && part.endsWith('}')) {
+        return <span key={i} className={styles.textGradient}>{part.slice(1, -1)}</span>;
+      }
+      return part;
+    });
+  };
 
   if (selectedStory) {
     return (
@@ -16,7 +28,7 @@ const SuccessStoriesView = () => {
           className={styles.btnOutline}
           style={{ marginBottom: '2rem', display: 'flex', alignItems: 'center', gap: '0.5rem', borderRadius: '12px' }}
         >
-          <ArrowLeft size={16} /> Volver a historias
+          <ArrowLeft size={16} /> {t('docs.successStories.backLink')}
         </button>
 
         <header className={styles.viewHeader} style={{ textAlign: 'left', alignItems: 'flex-start' }}>
@@ -56,15 +68,15 @@ const SuccessStoriesView = () => {
   return (
     <div className={styles.viewContainer}>
       <header className={styles.viewHeader}>
-        <div className={styles.productBadge} style={{ position: 'static', display: 'inline-block', marginBottom: '1rem' }}>CASOS DE ÉXITO</div>
-        <h1 className={styles.viewTitle}>Resultados <span className={styles.textGradient}>Reales</span></h1>
+        <div className={styles.productBadge} style={{ position: 'static', display: 'inline-block', marginBottom: '1rem' }}>{t('docs.successStories.badge')}</div>
+        <h1 className={styles.viewTitle}>{renderWithGradient(t('docs.successStories.title'))}</h1>
         <p className={styles.viewSubtitle}>
-          Descubre cómo empresas líderes están utilizando Kraken AI para escalar sus operaciones y maximizar su ROI.
+          {t('docs.successStories.lead')}
         </p>
       </header>
 
       <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(400px, 1fr))', gap: '2rem', marginTop: '4rem' }}>
-        {successStories.map((story) => (
+        {currentStories.map((story) => (
           <div 
             key={story.id} 
             className={styles.resourceCard} 
@@ -83,18 +95,18 @@ const SuccessStoriesView = () => {
             <h3 style={{ fontSize: '1.75rem', marginBottom: '1rem' }}>{story.title}</h3>
             <p style={{ color: '#9ca3af', marginBottom: '2rem', lineHeight: '1.6' }}>{story.summary}</p>
             <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', fontWeight: 700, color: '#0066ff' }}>
-              Leer historia completa <ArrowRight size={16} />
+              {t('docs.successStories.viewFull')} <ArrowRight size={16} />
             </div>
           </div>
         ))}
       </div>
 
       <section style={{ marginTop: '10rem', padding: '6rem', background: '#000', borderRadius: '3rem', color: '#fff', textAlign: 'center', border: '1px solid rgba(255,255,255,0.05)' }}>
-        <h2 style={{ fontSize: '3rem', fontWeight: 900, marginBottom: '1.5rem' }}>¿Listo para ser nuestra próxima historia de éxito?</h2>
+        <h2 style={{ fontSize: '3rem', fontWeight: 900, marginBottom: '1.5rem' }}>{t('docs.successStories.cta.title')}</h2>
         <p style={{ color: '#9ca3af', fontSize: '1.25rem', marginBottom: '3rem', maxWidth: '700px', marginInline: 'auto' }}>
-          Únete a la élite de empresas que ya han dejado atrás la atención al cliente tradicional.
+          {t('docs.successStories.cta.text')}
         </p>
-        <button className={styles.btnPrimary} style={{ padding: '1.5rem 4rem', fontSize: '1.25rem' }}>Configurar mi Agente de IA</button>
+        <button className={styles.btnPrimary} style={{ padding: '1.5rem 4rem', fontSize: '1.25rem' }}>{t('docs.successStories.cta.btn')}</button>
       </section>
     </div>
   );

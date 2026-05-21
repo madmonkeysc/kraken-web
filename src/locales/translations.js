@@ -454,12 +454,80 @@ export const translations = {
         now: "Ahora",
         next: "Próximamente",
         future: "Futuro"
+      },
+      columns: [
+        {
+          status: "Ahora",
+          badge: "NOW",
+          items: [
+            { title: "Kraken Voice API", desc: "Agentes que hablan con voz humana hiper-realista.", iconName: "Zap" },
+            { title: "Integración Directa con CRM", desc: "HubSpot, Salesforce y Pipedrive sin intermediarios.", iconName: "CheckCircle2" },
+            { title: "Kraken Multi-Agente", desc: "Varios agentes colaborando para resolver flujos complejos.", iconName: "Rocket" }
+          ]
+        },
+        {
+          status: "Próximamente",
+          badge: "NEXT",
+          items: [
+            { title: "Kraken Analytics Pro", desc: "Dashboards avanzados con predicción de churn.", iconName: "Star" },
+            { title: "Email AI Agent", desc: "Gestión completa de bandejas de entrada y redacción.", iconName: "Clock" },
+            { title: "Self-Learning Agents", desc: "IA que aprende de las correcciones humanas en tiempo real.", iconName: "Sparkles" }
+          ]
+        },
+        {
+          status: "Futuro",
+          badge: "FUTURE",
+          items: [
+            { title: "Kraken Video AI", desc: "Generación de video-respuestas personalizadas.", iconName: "Shield" },
+            { title: "Autonomous Enterprise", desc: "Sistemas que gestionan departamentos enteros.", iconName: "Circle" }
+          ]
+        }
+      ],
+      suggest: {
+        title: "¿Quieres proponer una funcionalidad?",
+        desc: "Tu feedback es el motor de nuestra innovación. Cuéntanos qué necesitas.",
+        cta: "Enviar Propuesta"
       }
     },
     changelogPage: {
       title: "Registro de {Cambios}",
       subtitle: "Todas las actualizaciones y mejoras que hemos implementado para hacer de Kraken la mejor plataforma de IA.",
-      version: "Versión"
+      version: "Versión",
+      updates: [
+        {
+          version: "3.2.0",
+          date: "12 Mayo, 2024",
+          title: "Kraken Voice v1.0 Launch",
+          type: "major",
+          items: [
+            "Lanzamiento oficial de la API de Voz con latencia ultra-baja (<500ms).",
+            "Soporte para 12 acentos diferentes en español (MX, ES, AR, CO, etc).",
+            "Detección automática de interrupciones para una conversación más fluida."
+          ]
+        },
+        {
+          version: "3.1.5",
+          date: "05 Mayo, 2024",
+          title: "WhatsApp Multi-Device Sync",
+          type: "feature",
+          items: [
+            "Sincronización masiva de historial de chats para entrenamiento de IA.",
+            "Mejora en la estabilidad de la conexión con WhatsApp Business API.",
+            "Nuevos webhooks para eventos de lectura y entrega."
+          ]
+        },
+        {
+          version: "3.1.0",
+          date: "28 Abril, 2024",
+          title: "Security Patch & UI Polish",
+          type: "fix",
+          items: [
+            "Actualización de protocolos de cifrado AES-256 para almacenamiento de logs.",
+            "Rediseño completo de la sección de analíticas para mejor legibilidad.",
+            "Corrección de errores menores en la integración con Shopify."
+          ]
+        }
+      ]
     },
     realEstate: {
       urgency: "Solo quedan {spots} cupos en el plan de onboarding prioritario este mes.",
@@ -2411,7 +2479,7 @@ export const translations = {
     },
     companyPage: {
       badge: "EMPRESA",
-      title: "Construyendo el futuro de la Interacción",
+      title: "Construyendo el futuro de la {Interacción}",
       subtitle: "En Kraken, creemos que la tecnología debe ser invisible y la comunicación debe ser instantánea.",
       mission: {
         title: "Nuestra Misión",
@@ -2428,7 +2496,7 @@ export const translations = {
         ]
       },
       manifesto: {
-        title: "Nuestro Manifiesto",
+        title: "Nuestro {Manifiesto}",
         desc: "No estamos aquí para reemplazar a los humanos, sino para liberarlos. Creamos tecnología que devuelve el tiempo a las personas para que puedan enfocarse en lo que realmente importa: la creatividad, la empatía y la conexión real."
       },
       contact: {
@@ -3093,11 +3161,27 @@ export const translations = {
       },
       successStories: {
         badge: "RESULTADOS REALES",
-        title: "Casos de Éxito",
-        lead: "Mira cómo empresas líderes están transformando su operación con Kraken AI.",
-        viewFull: "Ver estudio completo",
-        backLink: "Volver a casos de éxito",
-        cta: { title: "¿Listo para escribir tu propia historia?", text: "Únete a las cientos de empresas que ya están escalando con inteligencia artificial real.", btn: "Agendar Demo Estratégica" }
+        title: "Resultados {Reales}",
+        lead: "Descubre cómo empresas líderes están utilizando Kraken AI para escalar sus operaciones y maximizar su ROI.",
+        viewFull: "Leer historia completa",
+        backLink: "Volver a historias",
+        cta: {
+          title: "¿Listo para ser nuestra próxima historia de éxito?",
+          text: "Únete a la élite de empresas que ya han dejado atrás la atención al cliente tradicional.",
+          btn: "Configurar mi Agente de IA"
+        }
+      },
+      assistant: {
+        welcome: "¡Hola! Soy tu asistente KRAKEN.",
+        talkToAI: "Hablar con agente de IA",
+        goToWhatsapp: "Ir directo a WhatsApp",
+        createAgent: "Empezar a crear mi agente IA",
+        aiReply: "Esa es una excelente pregunta. Estamos trabajando en integrar más capacidades de resolución automática. ¿Deseas que contacte a un humano?",
+        title: "Asistente KRAKEN",
+        status: "IA Activa • Soporte 24/7",
+        howHelp: "¿Cómo podemos ayudarte hoy?",
+        backToMenu: "← Volver al menú",
+        placeholder: "Escribe tu duda..."
       },
       defaultContent: {
         title: "Contenido en desarrollo",
@@ -4751,7 +4835,7 @@ export const translations = {
     },
     companyPage: {
       badge: "COMPANY",
-      title: "Building the future of Interaction",
+      title: "Building the future of {Interaction}",
       subtitle: "At Kraken, we believe technology should be invisible and communication should be instantaneous.",
       mission: {
         title: "Our Mission",
@@ -4768,7 +4852,7 @@ export const translations = {
         ]
       },
       manifesto: {
-        title: "Our Manifesto",
+        title: "Our {Manifesto}",
         desc: "We are not here to replace humans, but to liberate them. We create technology that gives time back to people so they can focus on what really matters: creativity, empathy, and real connection."
       },
       contact: {
@@ -5072,12 +5156,80 @@ export const translations = {
         now: "Now",
         next: "Next",
         future: "Future"
+      },
+      columns: [
+        {
+          status: "Now",
+          badge: "NOW",
+          items: [
+            { title: "Kraken Voice API", desc: "Agents that speak with hyper-realistic human voice.", iconName: "Zap" },
+            { title: "Direct CRM Integration", desc: "HubSpot, Salesforce, and Pipedrive without intermediaries.", iconName: "CheckCircle2" },
+            { title: "Kraken Multi-Agent", desc: "Multiple agents collaborating to resolve complex workflows.", iconName: "Rocket" }
+          ]
+        },
+        {
+          status: "Next",
+          badge: "NEXT",
+          items: [
+            { title: "Kraken Analytics Pro", desc: "Advanced dashboards with churn prediction.", iconName: "Star" },
+            { title: "Email AI Agent", desc: "Complete inbox management and drafting.", iconName: "Clock" },
+            { title: "Self-Learning Agents", desc: "AI that learns from human corrections in real time.", iconName: "Sparkles" }
+          ]
+        },
+        {
+          status: "Future",
+          badge: "FUTURE",
+          items: [
+            { title: "Kraken Video AI", desc: "Personalized video response generation.", iconName: "Shield" },
+            { title: "Autonomous Enterprise", desc: "Systems that manage entire departments.", iconName: "Circle" }
+          ]
+        }
+      ],
+      suggest: {
+        title: "Want to suggest a feature?",
+        desc: "Your feedback is the engine of our innovation. Tell us what you need.",
+        cta: "Send Proposal"
       }
     },
     changelogPage: {
       title: "{Changelog}",
       subtitle: "All the updates and improvements we have implemented to make Kraken the best AI platform.",
-      version: "Version"
+      version: "Version",
+      updates: [
+        {
+          version: "3.2.0",
+          date: "May 12, 2024",
+          title: "Kraken Voice v1.0 Launch",
+          type: "major",
+          items: [
+            "Official launch of the Voice API with ultra-low latency (<500ms).",
+            "Support for 12 different accents in Spanish (MX, ES, AR, CO, etc).",
+            "Automatic interruption detection for smoother conversation."
+          ]
+        },
+        {
+          version: "3.1.5",
+          date: "May 05, 2024",
+          title: "WhatsApp Multi-Device Sync",
+          type: "feature",
+          items: [
+            "Massive chat history synchronization for AI training.",
+            "Improved connection stability with WhatsApp Business API.",
+            "New webhooks for read and delivery events."
+          ]
+        },
+        {
+          version: "3.1.0",
+          date: "April 28, 2024",
+          title: "Security Patch & UI Polish",
+          type: "fix",
+          items: [
+            "AES-256 encryption protocols update for log storage.",
+            "Complete redesign of the analytics section for better readability.",
+            "Minor bug fixes in the Shopify integration."
+          ]
+        }
+      ]
     },
     docs: {
       title: "Documentation",
@@ -5527,11 +5679,27 @@ export const translations = {
       },
       successStories: {
         badge: "REAL RESULTS",
-        title: "Success Stories",
-        lead: "See how leading companies are transforming their operations with Kraken AI.",
-        viewFull: "View full case study",
-        backLink: "Back to success stories",
-        cta: { title: "Ready to write your own story?", text: "Join hundreds of companies already scaling with real artificial intelligence.", btn: "Schedule Strategic Demo" }
+        title: "Real {Results}",
+        lead: "Discover how leading companies are using Kraken AI to scale their operations and maximize their ROI.",
+        viewFull: "Read full story",
+        backLink: "Back to stories",
+        cta: {
+          title: "Ready to be our next success story?",
+          text: "Join the elite of companies that have already left traditional customer service behind.",
+          btn: "Configure my AI Agent"
+        }
+      },
+      assistant: {
+        welcome: "Hello! I am your KRAKEN assistant.",
+        talkToAI: "Talk to AI Agent",
+        goToWhatsapp: "Go straight to WhatsApp",
+        createAgent: "Start building my AI Agent",
+        aiReply: "That is an excellent question. We are working on integrating more autonomous resolution capabilities. Would you like me to contact a human?",
+        title: "KRAKEN Assistant",
+        status: "AI Active • 24/7 Support",
+        howHelp: "How can we help you today?",
+        backToMenu: "← Back to menu",
+        placeholder: "Type your question..."
       },
       defaultContent: {
         title: "Content in development",
