@@ -4270,6 +4270,371 @@ export const translations = {
         badges: ["No card required", "Setup in 2 min"]
       }
     },
+    realEstate: {
+      urgency: "Only {spots} spots left in the priority onboarding plan this month.",
+      urgencyLink: "Reserve yours →",
+      tag: "Real Estate Agents",
+      heroTitle: "Stop losing sales",
+      heroAccent: "while you sleep.",
+      heroSubtitle: "Your competition already has an AI agent that handles leads at 3 AM, schedules visits autonomously, and closes three times as many properties. When are you going to start?",
+      heroCtaPrimary: "Start free today",
+      heroCtaSecondary: "Watch live demo",
+      heroSocial: "More than 1,200+ agents are already closing more with Kraken",
+      chatBot1: "Hello 👋 I am your Kraken assistant. What type of property are you looking for?",
+      chatUser1: "I'm looking for a condo in Polanco, max $5M, 2 bedrooms 🏠",
+      chatBot2: "Perfect! I have 3 options that match. When would you like to visit the first one?",
+      stats: [
+        { value: '80%', label: 'Automated inquiries' },
+        { value: '3×', label: 'More closings per month' },
+        { value: '< 2s', label: 'Response time' },
+        { value: '48h', label: 'Ready implementation' }
+      ],
+      pains: {
+        tag: "The real problem",
+        title: "Every minute without responding is money going to the competition",
+        desc: "78% of buyers choose the agent who responds first. Not the most experienced. Not the one with the best portfolio. The fastest one.",
+        items: [
+          { title: 'Leads escaping at midnight', desc: 'A potential buyer fills out your form at 11 PM looking for a house. Nobody answers. By the next day, they have already signed with your competitor.' },
+          { title: '80% of your time on repetitive tasks', desc: 'Answering "How much is it?" or "Does it have parking?" a hundred times a day steals the time you should be investing in closing deals.' },
+          { title: 'Cold prospects that never close', desc: 'You invest in ads, receive inquiries, but without immediate and constant follow-up, 73% of leads are lost forever.' },
+          { title: 'Appointments that fall through', desc: 'You schedule a visit, the person doesn\'t show up, you reschedule... The cycle repeats and your commissions remain on pause.' }
+        ]
+      },
+      agitation: {
+        title: "Every month you wait, you lose an average of 12 qualified leads.",
+        desc: "At an average commission of $8,000 USD per closing, that is $96,000 dollars a year evaporating because you don't have an automated response system. It's not an exaggeration. It's math.",
+        cta: "I want to stop losing money"
+      },
+      solution: {
+        tag: "The solution",
+        title: "Your AI real estate agent, active 24/7 with no breaks and no commissions",
+        desc: "Kraken works while you sleep, while you are on a showing, and while you enjoy the weekend. Every lead attended, every appointment scheduled, every follow-up sent — automatic.",
+        items: [
+          { title: 'Instant 24/7 response', desc: 'Your Kraken agent responds in less than 2 seconds to any inquiry, at any time. Never leave a lead unattended again.', stat: '< 2 sec', statLabel: 'response time' },
+          { title: 'Automatic lead qualification', desc: 'Kraken asks, filters, and qualifies: area, budget, property type, and urgency. You only talk to prospects ready to buy.', stat: '3×', statLabel: 'more monthly closings' },
+          { title: 'Frictionless showing scheduling', desc: 'The agent connects to your calendar and schedules showings automatically. No phone calls, no manual coordination, no surprise cancellations.', stat: '60%', statLabel: 'fewer no-shows' },
+          { title: 'Smart automated follow-up', desc: 'If a lead doesn\'t respond, Kraken follows up via WhatsApp, email, or SMS. Consistent, personalized, and at the right time.', stat: '78%', statLabel: 're-engagement rate' },
+          { title: 'Real-time reports and analytics', desc: 'See which properties generate the most interest, where you lose your leads, and how to improve. Actionable data to make better decisions.', stat: '+40%', statLabel: 'ad ROI' },
+          { title: 'Scale without hiring more staff', desc: 'A single Kraken agent handles hundreds of simultaneous conversations. Grow your portfolio without growing your payroll.', stat: '∞', statLabel: 'conversations at once' }
+        ]
+      },
+      features: {
+        tag: "All-inclusive",
+        title: "Everything you need to dominate your market",
+        desc: "No complicated integrations. No months of configuration. Your agent will be working in 48 hours.",
+        cta: "Get started in 48 hours",
+        items: [
+          'Direct integration with WhatsApp, Messenger, Instagram, and your website',
+          'Responses trained with your actual properties and real prices',
+          'Prospect qualification with customized questions',
+          'Schedule showings directly in Google Calendar or Calendly',
+          'Automatic post-visit follow-up',
+          'Instant notifications when a lead is ready to close',
+          'Support in Spanish, English, and more than 95 languages',
+          'Dashboard with real-time conversion metrics',
+          'No-code, active in less than 48 hours',
+          'Compliance with privacy regulations (GDPR / LFPDPPP)'
+        ]
+      },
+      testimonials: {
+        tag: "Real results",
+        title: "Agents who have already taken the step — and sell more",
+        items: [
+          { name: 'Carlos Mendoza', role: 'Independent agent, CDMX', quote: 'I used to lose leads while sleeping. Now Kraken answers them at 3 AM, and when I get to the office, I already have scheduled appointments. I closed 4 properties in the first month.' },
+          { name: 'Sofía Reyes', role: 'Commercial Director, Re/Max Guadalajara', quote: 'We implemented Kraken with 10 agents on our team. Repetitive inquiries went down 80% and closings rose 35% in 60 days. The numbers don\'t lie.' },
+          { name: 'Ricardo Torres', role: 'Real estate developer, MTY', quote: 'We launched a 120-unit development and Kraken handled more than 800 inquiries in the first week without my team touching the phone. Sensational.' }
+        ]
+      },
+      decision: {
+        tag: "Your choice today",
+        title: "Are you going to keep losing money or take the lead?",
+        desc: "The real estate market has changed. There are two types of agents today: those who fight for every lead and those who let AI do the heavy lifting.",
+        traditional: {
+          title: "Traditional Agent",
+          items: ["Response in hours (or never)", "80% of time spent on cold prospecting", "Leads that get cold and disappear", "Growth limited to your sleep hours"],
+          result: "Stagnant income and constant burnout."
+        },
+        kraken: {
+          title: "Kraken AI Agent",
+          items: ["Instant response 24/7/365", "Schedule showings while you sleep", "Automatic prospect qualification", "3x faster sales closing"],
+          result: "Massive scale and real time freedom."
+        }
+      },
+      roi: {
+        title: "Doing nothing is costing you thousands of dollars",
+        desc: "Every day you postpone automation, you are giving away commissions to your competition. If you close just 1 extra property per month with Kraken, the system pays for itself 10 times over.",
+        badges: ["No extra commissions", "Implementation in 48h"],
+        calc: {
+          commission: "Average commission per closing",
+          extra: "Expected extra closings / month",
+          investment: "Monthly investment in Kraken",
+          roi: "Estimated minimum ROI",
+          from: "from"
+        }
+      },
+      final: {
+        badge: "Launch offer: Only {spots} spots with onboarding included",
+        title: "Are you going to keep losing commissions or start dominating your market?",
+        desc: "You don't need to be a tech expert. We configure your Kraken agent for you. Try it for 14 days risk-free. If you don't generate more leads, you pay nothing. Simple as that.",
+        ctaPrimary: "Join now — 14 days free",
+        ctaSecondary: "See how it works live",
+        footer: ["✓ No credit card required", "✓ Setup in 48 hours", "✓ Cancel anytime"]
+      }
+    },
+    condos: {
+      urgency: "Only {spots} spots left for condo integration this quarter.",
+      urgencyLink: "Digitalize your building →",
+      tag: "Property Managers",
+      heroTitle: "Manage your buildings",
+      heroAccent: "without the WhatsApp chaos.",
+      heroSubtitle: "Your neighbors want immediate answers. Your AI assistant resolves doubts, manages reservations, collects maintenance fees, and handles reports 24/7.",
+      heroCtaPrimary: "Start free trial",
+      heroCtaSecondary: "Watch live demo",
+      heroSocial: "More than 400+ buildings are already smart with Kraken",
+      chatBot1: "Hello 👋 I am the Vento Tower assistant. How can I help you today?",
+      chatUser1: "What time does the pool close today? 🏊‍♂️",
+      chatBot2: "Today, Sunday, it closes at 8:00 PM. Would you like to reserve a lounge chair?",
+      stats: [
+        { value: '90%', label: 'Resolved inquiries' },
+        { value: '25%', label: 'Less delinquency' },
+        { value: '24/7', label: 'Resident support' },
+        { value: '0', label: 'Late-night calls' }
+      ],
+      pains: {
+        tag: "The challenge of managing",
+        title: "Traditional management is draining your energy",
+        desc: "Spending the day answering the same questions and dealing with complaints exhausts anyone. It is time to delegate repetitive tasks to Artificial Intelligence.",
+        items: [
+          { title: 'Resident calls at midnight', desc: 'A neighbor has a complaint about noise or a leak at 11 PM. They call your personal phone. You have no rest or boundaries.' },
+          { title: '80% of your time on repetitive questions', desc: 'Answering "What are the pool rules?" or "How do I pay maintenance fees?" consumes your day and doesn\'t let you actually manage.' },
+          { title: 'Delinquency due to lack of follow-up', desc: 'Neighbors forget to pay, and you forget to collect. The lack of a constant reminder system affects the condo\'s cash flow.' },
+          { title: 'Chaos in booking amenities', desc: 'Reservations via WhatsApp, double-bookings at the grill, arguments over the paddle court. Managing this manually is a nightmare.' }
+        ]
+      },
+      agitation: {
+        title: "How much time do you lose on micro-management?",
+        highlight: "An average manager spends 15 hours a week just on messages.",
+        desc: "You could use that time to find new clients, improve buildings, or simply rest. Your peace of mind is priceless.",
+        cta: "Automate my management"
+      },
+      solution: {
+        tag: "The smart solution",
+        title: "An expert assistant that lives inside your neighbors' WhatsApp",
+        desc: "Don't force them to download another App they won't use. Kraken serves them where they already are, providing a premium and modern experience.",
+        items: [
+          { title: '24/7 service without you being there', desc: 'Your Kraken agent responds to questions about bylaws, schedules, and processes instantly, any day, at any time.', stat: '< 2 sec', statLabel: 'response time' },
+          { title: 'Automatic reservations', desc: 'Neighbors book the event hall or paddle court directly with the AI. No errors, no double-bookings, no intervention from you.', stat: '100%', statLabel: 'order in amenities' },
+          { title: 'Smart bulk announcements', desc: 'Send water outage, fumigation, or assembly notices via WhatsApp to all neighbors in seconds. Ensure everyone is informed.', stat: '98%', statLabel: 'read rate' },
+          { title: 'Easy incident reporting', desc: 'Is the elevator broken? The neighbor reports it to the AI, Kraken categorizes the urgency and notifies you only about what\'s important.', stat: '60%', statLabel: 'more efficiency' },
+          { title: 'Payment and financial control', desc: 'Sends maintenance fee reminders and receives receipts automatically. Kraken organizes who owes and who has already paid.', stat: '-30%', statLabel: 'in delinquency' },
+          { title: 'Manage more with less', desc: 'Manage 5 or 10 condos with the same effort you would spend on one. Kraken is the assistant that scales your property management business.', stat: '∞', statLabel: 'scalability' }
+        ]
+      },
+      features: {
+        tag: "Total Control",
+        title: "Everything under control without you having to intervene",
+        desc: "We configure Kraken with the bylaws and specific needs of each of your buildings.",
+        cta: "Configure my building",
+        items: [
+          'Direct integration with WhatsApp (where your neighbors are)',
+          'Knowledge base loaded with the condominium\'s internal bylaws',
+          'Amenity reservation system (Paddle, Pool, Event halls)',
+          'Management and categorization of maintenance reports',
+          'Mass broadcasting of notices and circulars via WhatsApp',
+          'Personalized maintenance fee reminders',
+          'Multi-condo management from a single dashboard',
+          'Automatic collection of payment receipts',
+          'Urgent notifications to the manager only when necessary',
+          'Data security and privacy for all residents'
+        ]
+      },
+      testimonials: {
+        tag: "Happy Residents",
+        title: "What managers and committees say",
+        items: [
+          { name: 'Andrés Gutiérrez', role: 'Manager at "Torre Vento", Queretaro', quote: 'Kraken gave me my personal life back. Before, I received WhatsApps from neighbors at all hours. Now the AI resolves 90% of the doubts and only alerts me if there\'s a real emergency.', avatar: 'AG' },
+          { name: 'Lucía Fernández', role: 'Director of Administraciones Plus, CDMX', quote: 'We manage 8 buildings, and with Kraken, we were able to reduce delinquency by 25% in just two months. The neighbors love that they get answered instantly on WhatsApp.', avatar: 'LF' },
+          { name: 'Roberto Valadez', role: 'Committee President, Monterrey', quote: 'Booking the grill was a constant source of arguments. With the AI, the process is transparent and automatic. Harmony in the building improved immensely.', avatar: 'RV' }
+        ]
+      },
+      decision: {
+        tag: "Your evolution",
+        title: "How do you want your next assembly to go?",
+        desc: "Show up with an AI system that puts your building at the forefront of technology. Neighbors value innovation that makes their lives easier.",
+        traditional: {
+          title: "Manual Management",
+          items: ["Neighbor questions unanswered for days", "Errors in booking amenities", "Difficult and manual collections", "Overwhelmed and stressed manager"]
+        },
+        kraken: {
+          title: "Kraken Management",
+          items: ["Instant response 24/7/365", "Automatic and conflict-free bookings", "Automated collections via WhatsApp", "Scalability to manage more buildings"]
+        }
+      },
+      roi: {
+        title: "Increase the value of your management",
+        desc: "Offering an AI assistant allows you to charge a premium management fee and win bids against traditional managers.",
+        badges: ["Immediate added value", "Savings in operational staff"],
+        rows: [
+          { label: "Operating cost of a human assistant", value: "$8,000+ MXN" },
+          { label: "Human availability", value: "8 hrs / 5 days" },
+          { label: "Kraken cost per building", value: "Fraction of a salary", highlight: true },
+          { label: "Kraken availability", value: "24/7/365", total: true }
+        ]
+      },
+      final: {
+        badge: "Make your condominium the best place to live",
+        title: "Ready to transform your management?",
+        accent: "Your neighbors will thank you.",
+        desc: "It doesn't matter if it's a small building or a massive complex. Kraken adapts to your rules and needs. Get started today.",
+        ctaPrimary: "Activate Kraken in my building",
+        ctaSecondary: "Request a presentation",
+        note: "✓ Easy implementation  ·  ✓ No heavy Apps needed  ·  ✓ Visible results"
+      }
+    },
+    insurance: {
+      urgency: {
+        badge: "Only {spots} spots left for insurance agents this month.",
+        link: "Secure yours today →"
+      },
+      hero: {
+        tag: "Insurance Agents",
+        title: "Sell insurance and retirement plans",
+        accent: "while you sleep.",
+        subtitle: "Your prospects want protection NOW. Your AI agent responds instantly, quotes policies, explains retirement plans, and manages claims 24/7.",
+        ctaPrimary: "Start free trial",
+        ctaSecondary: "Watch live demo",
+        social: "More than 800+ agents already use Kraken to scale",
+        chat: {
+          bot1: "Hello 👋 I am your insurance assistant. What can I protect you with today?",
+          user1: "Hi, I want information about a retirement plan 👴",
+          bot2: "Excellent decision! Did you know you can deduct this from taxes? Tell me your age and I'll project your savings in 5 seconds."
+        }
+      },
+      stats: [
+        { value: '90%', label: 'Resolved inquiries' },
+        { value: '4×', label: 'More quotes' },
+        { value: '< 2s', label: 'Immediate response' },
+        { value: '24/7', label: 'Total support' },
+      ],
+      pains: {
+        tag: "The risk of waiting",
+        title: "In the insurance world, the first one to arrive gets the policy",
+        desc: "85% of clients buy their insurance from the first agent who gives them a clear quote. If you take an hour to respond, you have already lost the sale.",
+        items: [
+          { title: 'Prospects lost at midnight', desc: 'A client looks for auto or medical insurance at 11 PM. Nobody answers. The next day, they have already bought their policy from a direct insurer.' },
+          { title: '80% of your time on repetitive questions', desc: 'Answering "What does the PPR cover?" or "How do I report a claim?" a hundred times a day takes time away from closing large corporate accounts.' },
+          { title: 'Follow-ups that never happen', desc: 'You send a Life quote, the client says "I\'ll think about it", and without consistent follow-up, 70% of your potential sales evaporate.' },
+          { title: 'Forgotten renewals', desc: 'You miss the expiration date of an important client. The competition contacts them first and you lose a portfolio built over years.' }
+        ]
+      },
+      agitation: {
+        title: "Do you know how much money you are leaving on the table?",
+        subtitle: "An average agent loses 4 policies per month due to lack of response.",
+        desc: "That represents not only the initial commission but years of lost renewals. Don't let a hot lead go cold because you were busy driving or on another call.",
+        cta: "Capture every opportunity now"
+      },
+      solutions: {
+        tag: "Your new partner",
+        title: "An AI assistant expert in insurance, who knows your products better than anyone",
+        desc: "Kraken is not a basic chatbot. It is an AI trained to understand your clients' protection needs and close sales professionally.",
+        items: [
+          { title: 'Instant 24/7 response', desc: 'Your Kraken agent responds in less than 2 seconds. Quotes auto, life, or retirement plans instantly, without you lifting a finger.', stat: '< 2 sec', statLabel: 'response time' },
+          { title: 'Retirement Plan Advisory', desc: 'Kraken explains the tax benefits of the PPR, projects savings, and pre-qualifies prospects interested in securing their retirement.', stat: '45%', statLabel: 'more retirement leads' },
+          { title: 'Stress-free claims management', desc: 'The agent guides the client in moments of panic: what photos to take, what number to call, and calms their concerns while the adjuster arrives.', stat: '95%', statLabel: 'client satisfaction' },
+          { title: 'Automatic renewals', desc: 'Kraken detects policies that are about to expire and contacts the client via WhatsApp to secure the renewal. Protect your portfolio.', stat: '92%', statLabel: 'renewal rate' },
+          { title: 'Portfolio analytics', desc: 'Discover which lines are queried the most, what objections your clients have, and optimize your strategy with actual data.', stat: '+40%', statLabel: 'operational efficiency' },
+          { title: 'Scale your agency without limits', desc: 'Serve thousands of policyholders simultaneously without hiring more assistants. A large agency with minimal structure.', stat: '∞', statLabel: 'clients at once' }
+        ]
+      },
+      features: {
+        tag: "Total Protection",
+        title: "Technological shield for your professional career",
+        desc: "Focus on high-value human relationships. Let the AI handle the volume and tedious administrative tasks.",
+        cta: "Activate my agent today",
+        items: [
+          'Direct integration with WhatsApp, Messenger, Instagram, and your website',
+          'Automatic auto quoter and Life/Health pre-quoter',
+          'Expert explanation of Retirement Plans (PPR) 24/7',
+          'Claims assistant available at the moment of an accident',
+          'Collection and renewal reminders via WhatsApp',
+          'Lead qualification by line of business (Auto, Life, Health)',
+          'Notifications when a client requires urgent human attention',
+          'Control panel with all conversations and metrics',
+          'Active and trained with your conditions in less than 48 hours',
+          'Data protection under current privacy regulations'
+        ]
+      },
+      testimonials: {
+        tag: "Success cases",
+        title: "Colleagues who are already in the future",
+        items: [
+          { name: 'Jorge Villarreal', role: 'Elite Insurance Agent, Monterrey', quote: 'Kraken changed my life. Before, my phone wouldn\'t stop ringing with basic questions. Now my AI assistant quotes auto policies while I\'m in Life Insurance meetings.', avatar: 'JV' },
+          { name: 'Martha Elena Ruiz', role: 'Agency Director, Guadalajara', quote: 'My portfolio retention rose 15% thanks to Kraken contacting my clients a month before their renewal via WhatsApp. It\'s like having 5 assistants working for free.', avatar: 'MR' },
+          { name: 'Roberto Sánchez', role: 'Independent Broker, CDMX', quote: 'In the last accident of an important client, Kraken guided them step-by-step before I could even answer. The client was fascinated by the high-tech service.', avatar: 'RS' }
+        ]
+      },
+      decision: {
+        tag: "Your evolution",
+        title: "Traditional Agent or Augmented Agent?",
+        desc: "The insurance market has transformed. Clients no longer wait for tomorrow. AI does not replace the agent, but the agent with AI is replacing the traditional one today.",
+        traditional: {
+          title: "Traditional Agent",
+          items: ["Missed calls 60% of the time", "Portfolio that forgets to renew", "Stuck in $10 USD tasks", "Constant stress from lack of time"],
+          resultLabel: "THE COST:",
+          resultValue: "Stagnant income and clients leaving for direct competitors."
+        },
+        kraken: {
+          title: "Kraken AI Agent",
+          items: ["Quotes sent in < 10 seconds", "92% automatic retention", "24/7/365 claims assistant", "Focus on large accounts and strategy"],
+          resultLabel: "THE RESULT:",
+          resultValue: "Infinite scalability, time freedom, and an agency that grows on its own."
+        }
+      },
+      metrics: {
+        tag: "Impact Metrics",
+        title: "Real Results in Insurance Agencies",
+        desc: "Not promises, but data. Our agents have transformed their numbers in the first 60 days.",
+        items: [
+          { value: '+38%', label: 'Increase in policy closing', info: 'By responding instantly, you capture the lead when their buying intent is at its peak.' },
+          { value: '14 hrs', label: 'Time saved per week', info: 'Free yourself from answering repetitive questions and managing basic claims.' },
+          { value: '0', label: 'Prospects lost due to lack of attention', info: 'Your office never closes. We serve even at 3:00 AM on a Sunday.' }
+        ]
+      },
+      choice: {
+        title: "Join the AI or keep losing money?",
+        text1: "Every day that goes by without an AI agent, you are giving away prospects to direct insurers and brokers who have already modernized.",
+        text2: "It's not an expense, it's the armor for your portfolio. While you sleep, drive, or spend time with your family, Kraken is generating revenue for you.",
+        cta: "I want to evolve now",
+        visual: {
+          before: "Without Kraken (Today)",
+          beforeBar1: "Stagnant Income",
+          beforeBar2: "24/7 Manual Effort",
+          after: "With Kraken",
+          afterBar1: "Exponential Growth",
+          afterBar2: "Freedom & Automation"
+        }
+      },
+      roi: {
+        title: "Your investment is recovered with the first policy",
+        desc: "How much is a client worth who recommends you because you served them wonderfully during a crash? Kraken costs less than one meal a month, but gives you the results of an entire team.",
+        badges: ["Positive ROI from day 1", "No hidden costs"],
+        rows: [
+          { label: "Average annual auto premium", value: "$12,000 MXN" },
+          { label: "Average commission (12%)", value: "$1,440 MXN" },
+          { label: "Extra closings needed to pay for Kraken", value: "Only 1 a month", highlight: true },
+          { label: "Potential extra earnings", value: "+400%", total: true }
+        ]
+      },
+      final: {
+        badge: "Limited spots per month to guarantee onboarding quality",
+        title: "Protect your professional future",
+        accent: "just like you protect your clients.",
+        desc: "Join the insurance agents who are transforming the industry. Personalized configuration included. 14-day trial with no commitment. Your success is our success.",
+        ctaPrimary: "Start free now",
+        ctaSecondary: "Request guided demo",
+        note: "✓ Requires no technical knowledge  ·  ✓ Dedicated human support  ·  ✓ Guaranteed results"
+      }
+    },
     manifesto: {
       badge: "KRAKEN MANIFESTO",
       titleStart: "Many arms.",
