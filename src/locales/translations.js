@@ -947,7 +947,8 @@ export const translations = {
           priority: "Chat Prioritario",
           vip: "Soporte VIP",
           unlimited: "Ilimitados",
-          custom: "Personalizado"
+          custom: "Personalizado",
+          manager: "Manager de Cuenta"
         }
       },
       addons: {
@@ -4169,6 +4170,104 @@ export const translations = {
         typing: "Typing...",
         reset_chat: "Reset Chat",
         reset_msg: "Chat reset. How can I help you now as {name}?"
+      }
+    },
+    pricing: {
+      tag: "PRICING",
+      title: "Find the perfect plan for your business",
+      subtitle: "Start free today. No credit card required.",
+      monthly: "Monthly",
+      yearly: "Yearly",
+      discount: "-20% OFF",
+      trial: "7-day free trial · Cancel anytime",
+      periodMonth: "/mo",
+      plans: {
+        Free: { tagline: 'Ideal for individuals', desc: 'Experience the power of AI with no commitment.', cta: 'Start Free', features: ['300 Credits / month', '1 AI Agent', '1 Workspace', '1 Team Seat'] },
+        Standard: { tagline: 'For small startups', desc: 'Essential automation for growing teams.', cta: 'Choose Plan', features: ['3,000 Credits / month', '5 AI Agents', '5 Workspaces', '3 Team Seats'] },
+        Growth: { tagline: 'Most popular', desc: 'Full power to scale your operations today.', cta: 'Choose Plan', features: ['10,000 Credits / month', '10 AI Agents', '10 Workspaces', '20 Team Seats'] },
+        Scale: { tagline: 'For large companies', desc: 'Unlimited capacity and priority support.', cta: 'Choose Plan', features: ['40,000 Credits / month', 'Unlimited Agents', 'Unlimited Workspaces', 'Unlimited Seats'] },
+        Enterprise: { tagline: 'Custom solutions', desc: 'Advanced security and dedicated management.', cta: 'Contact Us', features: ['Custom Credits', 'Custom AI Models', 'Guaranteed SLA', 'Account Manager'] }
+      },
+      comparison: {
+        title: "Compare every feature",
+        subtitle: "Find the millimetric detail of what Kraken offers.",
+        featureHead: "Features",
+        cta: "Choose",
+        categories: {
+          config: "Workspace Configuration",
+          models: "Advanced AI Models",
+          channels: "Channels & Integrations",
+          support: "Support & Security"
+        },
+        features: {
+          credits: "Message Credits",
+          agents: "AI Agents",
+          workspaces: "Workspaces",
+          seats: "Team Seats",
+          storage: "Storage per Agent",
+          gpt4o: "GPT-4o Mini / Gemini Flash",
+          claude: "Claude 3.5 Sonnet / GPT-4o",
+          reasoning: "Reasoning Models (R1/o1)",
+          search: "Real-Time Web Search",
+          customModels: "Custom / Proprietary Models",
+          whatsapp: "WhatsApp Business API",
+          social: "Instagram / Messenger",
+          ecommerce: "Shopify / WooCommerce",
+          chat: "Slack / Discord / Telegram",
+          api: "Webhooks & API Access",
+          analytics: "Advanced Analytics",
+          sso: "Enterprise Security (SSO)",
+          branding: "Branding Removal",
+          supportType: "Priority Support"
+        },
+        values: {
+          community: "Community",
+          priority: "Priority Chat",
+          vip: "VIP Support",
+          unlimited: "Unlimited",
+          custom: "Custom",
+          manager: "Account Manager"
+        }
+      },
+      addons: {
+        tag: "BUILD YOUR PLAN",
+        title: "Customize your experience with add-ons",
+        cta: "Add",
+        items: [
+          { title: '1,000 Extra Credits', desc: 'More conversations for your workspace.', price: 10 },
+          { title: 'Extra AI Agent', desc: 'Add more specific automation.', price: 12 },
+          { title: 'Extra Team Seat', desc: 'Improve collaboration in your team.', price: 8 },
+          { title: 'Extra Workspace', desc: 'To manage multiple projects.', price: 14 }
+        ]
+      },
+      social: {
+        tag: "TESTIMONIALS",
+        title: "Loved by the best support teams",
+        companies: "Companies trust Kraken",
+        uptime: "AI Uptime",
+        testimonials: [
+          { quote: "Kraken is a clear signal of how agentic customer support will evolve.", user: "PB", name: "Pau Berenguer", role: "CMO at TechFlow" },
+          { quote: "This is incredible! The interface is intuitive and the AI accuracy is superior to everything.", user: "RC", name: "Rosa Cano", role: "Operations Lead" },
+          { quote: "Exactly what we needed to scale without increasing operational costs.", user: "MA", name: "Marc Artigas", role: "CEO at SaaSify" }
+        ]
+      },
+      faqs: {
+        tag: "FAQ",
+        title: "Everything you need to know",
+        items: [
+          { q: "Do credits accumulate?", a: "No, credits reset at the beginning of each billing cycle. We recommend choosing a plan that fits your monthly volume." },
+          { q: "What payment methods do you accept?", a: "We accept all major credit cards, PayPal, and bank transfers for Enterprise plans." },
+          { q: "Can I change plans at any time?", a: "Of course! You can upgrade or downgrade at any time from your dashboard. Changes are applied prorated immediately." },
+          { q: "How does priority support work?", a: "On higher plans, you have access to a direct chat channel with our engineering team to resolve any questions in minutes." },
+          { q: "Do you offer refunds?", a: "We offer a 14-day satisfaction guarantee. If Kraken isn't for you, we'll refund your money, no questions asked." }
+        ]
+      },
+      final: {
+        title: "Stop drowning in tickets. Start resolving them instantly.",
+        subtitle: "Join over 2,000 teams using Kraken to automate their customer service.",
+        ctaPrimary: "Create my AI Agent",
+        ctaSecondary: "Schedule Demo",
+        badges: ["No card required", "Setup in 2 min"]
       }
     },
     manifesto: {
